@@ -9,7 +9,7 @@
 - `services/`: 서비스별 운영 문서
 - `billing/`: 결제·청구·좌석 문서
 - `compliance/`: 개인정보·보안·삭제·사고 대응 문서
-- `education/`: 교육 담당자와 교육생 문서
+- `education/`: 교육 담당자와 수강생 문서
 - `templates/`: 바로 고쳐 쓸 수 있는 안내문·동의서
 - `qna/`: 프로젝트 실제 질의응답 반영 문서
 - `glossary.md`: 쉬운 용어 사전

@@ -85,7 +85,7 @@ const docs = [
   },
   {
     id: "02_서비스_전체_지도",
-    title: "서비스 전체 지도",
+    title: "서비스 운영 개요",
     file: "02_서비스_전체_지도.md",
     group: "운영 전체",
     summary: "Google, ChatGPT, OpenAI API, Cursor, Claude 계정 운영의 전체 관계도입니다.",
@@ -141,7 +141,7 @@ const docs = [
   },
   {
     id: "billing/과금_전체_지도",
-    title: "과금 전체 지도",
+    title: "과금 운영 개요",
     file: "billing/과금_전체_지도.md",
     group: "과금",
     summary: "구독, 선결제, API 사용량, 좌석 비용을 한눈에 비교합니다.",
@@ -172,7 +172,7 @@ const docs = [
     title: "개인정보 고지와 동의",
     file: "compliance/개인정보_고지_동의.md",
     group: "컴플라이언스",
-    summary: "교육생 계정 수집, 국외 이전, 제3자 제공 고지의 기본 틀입니다.",
+    summary: "수강생 계정 수집, 국외 이전, 제3자 제공 고지의 기본 틀입니다.",
   },
   {
     id: "compliance/정보보안_검토",
@@ -203,18 +203,18 @@ const docs = [
     summary: "교육 전·중·후 운영 체크리스트와 안내 흐름입니다.",
   },
   {
-    id: "education/교육생_주의사항",
-    title: "교육생 주의사항",
-    file: "education/교육생_주의사항.md",
+    id: "education/수강생_주의사항",
+    title: "수강생 주의사항",
+    file: "education/수강생_주의사항.md",
     group: "교육 운영",
-    summary: "교육생에게 반드시 고지해야 할 사용 주의사항입니다.",
+    summary: "수강생에게 반드시 고지해야 할 사용 주의사항입니다.",
   },
   {
-    id: "templates/교육생_안내문",
-    title: "교육생 안내문",
-    file: "templates/교육생_안내문.md",
+    id: "templates/수강생_안내문",
+    title: "수강생 안내문",
+    file: "templates/수강생_안내문.md",
     group: "양식과 Q&A",
-    summary: "바로 고쳐 쓸 수 있는 교육생 안내문 초안입니다.",
+    summary: "바로 고쳐 쓸 수 있는 수강생 안내문 초안입니다.",
   },
   {
     id: "templates/개인정보_고지서_동의서",
@@ -286,12 +286,12 @@ const sections = [
   {
     label: "교육 운영",
     icon: "graduation-cap",
-    docIds: ["education/교육담당자_운영_가이드", "education/교육생_주의사항"],
+    docIds: ["education/교육담당자_운영_가이드", "education/수강생_주의사항"],
   },
   {
     label: "양식과 Q&A",
     icon: "messages-square",
-    docIds: ["templates/교육생_안내문", "templates/개인정보_고지서_동의서", "qna/프로젝트_실제_QA", "glossary", "SOURCES"],
+    docIds: ["templates/수강생_안내문", "templates/개인정보_고지서_동의서", "qna/프로젝트_실제_QA", "glossary", "SOURCES"],
   },
 ];
 
@@ -328,7 +328,7 @@ const quickTiles = [
     label: "양식과 Q&A",
     description: "요청·신청·변경·폐기 등 운영 양식과 자주 묻는 질문",
     icon: "file-text",
-    target: "templates/교육생_안내문",
+    target: "templates/수강생_안내문",
     tone: "violet",
   },
   {
@@ -367,7 +367,7 @@ const lifecycleSteps = [
   {
     label: "요청",
     title: "사용 목적과 기간 확인",
-    detail: "교육생 수, 서비스, 결제 방식, 관리자 권한을 먼저 정리합니다.",
+    detail: "수강생 수, 서비스, 결제 방식, 관리자 권한을 먼저 정리합니다.",
     icon: "file-text",
     target: "00_프로젝트_개요",
   },
@@ -410,7 +410,7 @@ const lifecycleSteps = [
 
 const priorityDocs = [
   { label: "교육 전 체크", target: "education/교육담당자_운영_가이드" },
-  { label: "교육생 안내", target: "templates/교육생_안내문" },
+  { label: "수강생 안내", target: "templates/수강생_안내문" },
   { label: "동의서 초안", target: "templates/개인정보_고지서_동의서" },
   { label: "실제 Q&A", target: "qna/프로젝트_실제_QA" },
 ];

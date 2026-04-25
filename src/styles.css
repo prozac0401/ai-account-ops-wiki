@@ -457,8 +457,8 @@ svg {
 
 .article-hero h1 {
   margin: 0;
-  font-size: clamp(36px, 5vw, 56px);
-  line-height: 1.05;
+  font-size: clamp(30px, 3.2vw, 44px);
+  line-height: 1.12;
   letter-spacing: 0;
 }
 
@@ -979,10 +979,19 @@ svg {
 }
 
 .article-body blockquote {
+  box-sizing: border-box;
+  max-width: 100%;
   border-left: 3px solid var(--teal);
   background: var(--teal-soft);
   color: var(--muted);
   padding: 10px 16px;
+  overflow-wrap: anywhere;
+  word-break: keep-all;
+}
+
+.article-body blockquote p {
+  margin: 0;
+  white-space: pre-wrap;
 }
 
 .article-body code {
@@ -1327,6 +1336,8 @@ svg {
   .content-grid,
   .article-hero,
   .article-hero > div,
+  .article-body,
+  .sibling-rail,
   .overview-block,
   .ops-cockpit,
   .lifecycle-panel,
@@ -1336,16 +1347,25 @@ svg {
     max-width: 100%;
   }
 
+  .article-hero,
+  .article-body,
+  .sibling-rail {
+    width: calc(100vw - 36px);
+  }
+
   .article-hero h1 {
-    font-size: 37px;
+    font-size: 32px;
     overflow-wrap: anywhere;
   }
 
   .article-hero p:not(.eyebrow),
   .section-heading p,
-  .quick-card span:not(.quick-icon) {
+  .quick-card span:not(.quick-icon),
+  .article-body p,
+  .article-body li,
+  .article-body blockquote {
     overflow-wrap: anywhere;
-    word-break: keep-all;
+    word-break: break-all;
   }
 
   .meta-strip {

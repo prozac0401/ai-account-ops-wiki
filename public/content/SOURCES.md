@@ -39,6 +39,12 @@
 - Cursor Pricing
   https://cursor.com/pricing
 
+- Cursor Account Pricing
+  https://docs.cursor.com/en/account/pricing
+
+- Cursor Team Pricing
+  https://docs.cursor.com/en/account/teams/pricing
+
 - Cursor Enterprise
   https://cursor.com/enterprise
 
@@ -93,7 +99,7 @@
 ## 프로젝트 내부 근거
 
 - 2025-06-25 - 정보보안 교육 요청.md
-- 2025-07-01 - 교육생 개인정보 동의 안내.md
+- 2025-07-01 - 수강생 개인정보 동의 안내.md
 - 2025-07-05 - 이메일 삭제 시점.md
 - 기존 Google Workspace/Colab 위키 묶음
 
