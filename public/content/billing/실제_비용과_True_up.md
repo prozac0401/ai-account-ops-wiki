@@ -47,7 +47,7 @@
 | Google Workspace Flexible | 추가한 날부터 일할 계산 | 삭제 또는 라이선스 제거 시 일할 계산으로 줄어듦 |
 | ChatGPT Business monthly | baseline 초과 좌석은 일할 계산 | 현재 월에는 baseline 비용이 유지되고 다음 청구일에 반영 |
 | Claude Team monthly | 멤버 추가 또는 좌석 업그레이드는 남은 기간 일할 청구 | 멤버 제거만으로 즉시 크레딧/환불 없음. 좌석은 다른 멤버에게 재배정 가능 |
-| Cursor Teams self-serve | 남은 기간만큼 prorated 비용 계산, credit 우선 차감 | unused 기간은 credit 반영 가능. 이미 credit을 쓴 멤버는 주기 끝까지 seat가 점유될 수 있음 |
+| Cursor Teams self-serve | 남은 기간만큼 prorated 비용 계산, credit 우선 차감 | credit을 사용하지 않은 멤버에 한해 남은 기간만큼 credit 반영 가능 |
 
 Claude Team은 “멤버 제거”와 “총 좌석 수 감소”를 구분한다. Claude 공식 Billing 문서와 Team seat 관리 문서는 멤버를 제거해도 즉시 크레딧이나 환불이 발생하지 않고, 해당 좌석이 다른 멤버에게 배정 가능한 상태가 된다고 안내한다. 비용을 실제로 줄이려면 Billing 또는 Organization 설정에서 total seat allocation을 줄이는 절차를 별도로 확인한다.
 
@@ -175,7 +175,7 @@ ChatGPT Business 월간 플랜에서도 좌석 변경에 따른 비용 조정은
 
 ### Cursor prorated credit 예시
 
-Cursor Teams self-serve는 True-up으로 나중에 한 번에 정산되는 구조라기보다, 사용자를 추가하거나 제거할 때 prorated 비용 또는 credit이 바로 반영되는 구조로 본다.
+Cursor Teams self-serve는 True-up으로 나중에 한 번에 정산되는 구조라기보다, 사용자를 추가할 때 prorated 비용이 바로 계산되고 credit이 있으면 우선 차감되는 구조로 본다. 제거 시에는 credit을 사용하지 않은 멤버에 한해 남은 기간만큼 credit 반영이 가능하다고 구분한다.
 
 예를 들어 Teams를 $40/user/month로 20석 운영 중이고, 결제 주기 30일 중 10일차에 8명을 추가하면 남은 20일에 대해서만 비용이 계산된다.
 
