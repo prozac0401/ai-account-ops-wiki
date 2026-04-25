@@ -20,7 +20,7 @@ Cursor 가격 페이지 기준으로 Teams는 사용자당 월 과금이며, 다
 - Usage analytics and reporting
 - Org-wide privacy mode controls
 - Role-based access control
-- SAML(Security Assertion Markup Language)/OIDC(OpenID Connect) 기반 SSO(Single Sign-On)
+- SAML(Security Assertion Markup Language)<sup class="wiki-footnote-ref"><a class="wiki-footnote-link" id="abbr-ref-1" href="#abbr-note-1">[1]</a></sup>/OIDC(OpenID Connect)<sup class="wiki-footnote-ref"><a class="wiki-footnote-link" id="abbr-ref-2" href="#abbr-note-2">[2]</a></sup> 기반 SSO(Single Sign-On)<sup class="wiki-footnote-ref"><a class="wiki-footnote-link" id="abbr-ref-3" href="#abbr-note-3">[3]</a></sup>
 
 교육 운영에서는 중앙 결제와 Privacy Mode 제어가 특히 중요하다.
 
@@ -133,8 +133,8 @@ $213.33 - $100 credit = $113.33 결제 발생
 Enterprise는 Teams에 다음 기능이 추가되는 구조로 안내된다.
 
 - Pooled usage
-- Invoice/PO(Purchase Order) billing
-- SCIM(System for Cross-domain Identity Management) seat management
+- Invoice/PO(Purchase Order)<sup class="wiki-footnote-ref"><a class="wiki-footnote-link" id="abbr-ref-4" href="#abbr-note-4">[4]</a></sup> billing
+- SCIM(System for Cross-domain Identity Management)<sup class="wiki-footnote-ref"><a class="wiki-footnote-link" id="abbr-ref-5" href="#abbr-note-5">[5]</a></sup> seat management
 - AI code tracking API and audit logs
 - Granular admin and model controls
 - Priority support and account management
@@ -199,13 +199,13 @@ Cursor 가격 페이지는 self-serve는 카드 결제, 인보이스/wire는 Ent
 
 ## 약어 각주
 
-| 약어 | 전체 단어 | 설명 |
-|---|---|---|
-| SAML | Security Assertion Markup Language | 조직 계정과 외부 서비스를 연결할 때 쓰는 인증 연동 표준이다. |
-| OIDC | OpenID Connect | OAuth 2.0 기반의 사용자 인증 연동 표준이다. |
-| SSO | Single Sign-On | 조직 계정 하나로 여러 서비스에 로그인하게 하는 인증 방식이다. |
-| PO | Purchase Order | 구매 주문서다. 기업 구매 절차에서 인보이스 결제와 함께 등장한다. |
-| SCIM | System for Cross-domain Identity Management | 사용자 생성, 수정, 삭제를 자동화하는 계정 관리 표준이다. |
+<div class="wiki-footnotes">
+<p class="wiki-footnote" id="abbr-note-1"><a class="wiki-footnote-link" href="#abbr-ref-1">[1]</a> - SAML(Security Assertion Markup Language): 조직 계정과 외부 서비스를 연결할 때 쓰는 인증 연동 표준이다.</p>
+<p class="wiki-footnote" id="abbr-note-2"><a class="wiki-footnote-link" href="#abbr-ref-2">[2]</a> - OIDC(OpenID Connect): OAuth 2.0 기반의 사용자 인증 연동 표준이다.</p>
+<p class="wiki-footnote" id="abbr-note-3"><a class="wiki-footnote-link" href="#abbr-ref-3">[3]</a> - SSO(Single Sign-On): 조직 계정 하나로 여러 서비스에 로그인하게 하는 인증 방식이다.</p>
+<p class="wiki-footnote" id="abbr-note-4"><a class="wiki-footnote-link" href="#abbr-ref-4">[4]</a> - PO(Purchase Order): 구매 주문서다. 기업 구매 절차에서 인보이스 결제와 함께 등장한다.</p>
+<p class="wiki-footnote" id="abbr-note-5"><a class="wiki-footnote-link" href="#abbr-ref-5">[5]</a> - SCIM(System for Cross-domain Identity Management): 사용자 생성, 수정, 삭제를 자동화하는 계정 관리 표준이다.</p>
+</div>
 
 ## 출처
 

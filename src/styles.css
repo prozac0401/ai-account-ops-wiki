@@ -982,6 +982,36 @@ svg {
   text-underline-offset: 3px;
 }
 
+.wiki-footnote-ref {
+  margin-left: 2px;
+  font-size: 0.78em;
+  line-height: 0;
+  vertical-align: super;
+}
+
+.article-body .wiki-footnote-ref a,
+.article-body .wiki-footnote a {
+  font-family: var(--mono);
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.wiki-footnotes {
+  display: grid;
+  gap: 6px;
+  margin: 16px 0 6px;
+  padding-top: 12px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.wiki-footnote {
+  margin: 0 !important;
+  scroll-margin-top: 94px;
+}
+
 .article-body blockquote {
   box-sizing: border-box;
   max-width: 100%;

@@ -872,6 +872,17 @@ function bindGlobalEvents() {
       return;
     }
 
+    const footnoteLink = event.target.closest(".wiki-footnote-link");
+    if (footnoteLink) {
+      event.preventDefault();
+      const target = document.querySelector(footnoteLink.getAttribute("href"));
+      if (target) {
+        const top = window.scrollY + target.getBoundingClientRect().top - 92;
+        window.scrollTo({ top: Math.max(0, top), behavior: "smooth" });
+      }
+      return;
+    }
+
     const routeLink = event.target.closest("[data-route]");
     if (routeLink) {
       const id = routeLink.dataset.route;
