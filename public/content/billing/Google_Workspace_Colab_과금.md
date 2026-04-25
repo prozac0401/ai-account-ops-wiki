@@ -77,7 +77,7 @@ Google은 결제 정보 검증을 요구할 수 있다. 상황에 따라 작은 
 
 Google Workspace에서는 수동 결제 또는 조기 결제가 필요한 상황이 있다.
 
-특히 Flexible Plan 신규 계정은 가입 후 90일 이내에 20~50명 제한이 있을 수 있고, 더 많은 사용자를 추가하려면 목표 총 사용자 수의 50%에 해당하는 수동 결제를 해야 한다는 공식 안내가 있다. 이 결제는 향후 인보이스에 적용될 크레딧으로 남는다.
+특히 신규 결제 계정에서 수량을 늘릴 때 월 구독액의 일부를 선결제해야 하는 상황이 나올 수 있다. 이 내용은 공개 문서에서 확인한 보편 설명이 아니라, Google Workspace 지원 담당자에게 문의한 뒤 신규 결제 계정의 수량 확대와 관련된 내부 정책성 안내로 파악한 것이다. 당시 안내는 목표 총 사용자 수에 해당하는 월 구독액의 50% 수준을 수동 결제해야 할 수 있고, 이 금액은 향후 인보이스에 적용될 크레딧으로 남는다는 취지였다.
 
 ### 현장 실제 사례
 
@@ -85,7 +85,7 @@ Google Workspace에서는 수동 결제 또는 조기 결제가 필요한 상황
 
 운영 문서에서는 이렇게 기록한다.
 
-> “Google Workspace 신규 Flexible Plan 제한 또는 결제 신용 확인과 관련된 선결제 요구로 보임. 공식 Flexible Plan 문서의 90일/50% 수동 결제 규칙과 연결해 관리한다. Colab 단독 정책으로 단정하지 않는다.”
+> “Google Workspace 지원 문의를 통해 확인한 신규 결제 계정의 수량 확대 관련 내부 정책성 안내로 보임. 공개 문서로 확인한 보편 규칙은 아니므로, Colab 단독 정책으로 단정하지 않는다.”
 
 ## Colab Pro/Pro+ 과금
 
@@ -149,7 +149,7 @@ Cloud Identity Free 자체는 무료 라이선스다. 하지만 같은 사용자
 - 자동 Google Workspace 라이선스 끄기: https://docs.cloud.google.com/identity/docs/how-to/turn-off-automatic-google-workspace-licensing-during-setup
 - Colab Pro/Pro+ 설정: https://knowledge.workspace.google.com/admin/colab/set-up-colab-pro
 - Colab 라이선스 할당: https://knowledge.workspace.google.com/admin/colab/assign-colab-licenses-to-users?hl=ko
-- Flexible Plan 90일 제한과 50% 수동 결제: https://knowledge.workspace.google.com/admin/billing/flexible-plan
+- Flexible Plan: https://knowledge.workspace.google.com/admin/billing/flexible-plan
 - Google Workspace 결제 플랜: https://support.google.com/a/answer/1247360?hl=en-IE
 - Google Workspace 청구 이해: https://knowledge.workspace.google.com/admin/billing/understand-google-workspace-bills-and-charges
 - Google Workspace Annual/Fixed-Term Plan: https://knowledge.workspace.google.com/admin/billing/annual-fixed-term-plan
