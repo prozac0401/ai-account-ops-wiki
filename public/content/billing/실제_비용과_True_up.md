@@ -60,7 +60,7 @@
    +--------------------------------
      1일       10일              30일
 
-청구 감각:
+계산 방식:
 - 10석은 월 전체 비용
 - 추가 3석은 10일차 이후 남은 20일만 일할 계산
 ```
@@ -107,7 +107,7 @@ True-up은 이미 정한 기준 좌석 수와 실제 사용 좌석 수를 나중
 이 정산이 True-up이다.
 ```
 
-True-up은 특히 연간계약, baseline seat, active user 기준이 있는 서비스에서 중요하다. 계약서나 도움말에서 “baseline”, “active users”, “true-up period”, “monthly true-up cycle” 같은 표현이 나오면, 사용자를 잠깐 추가한 것처럼 보여도 청구 기준 좌석이 올라갈 수 있다.
+True-up은 특히 연간계약, baseline seat, active user 기준이 있는 서비스에서 중요하다. 계약서나 도움말에서 “baseline”, “active users”, “true-up 과금 주기”, “월별 true-up 정산 주기” 같은 표현이 나오면, 사용자를 잠깐 추가한 것처럼 보여도 청구 기준 좌석이 올라갈 수 있다.
 
 ### True-up 그래프
 
@@ -129,6 +129,29 @@ Active users
 ```
 
 ## True-up 예시
+
+### ChatGPT Business monthly는 True-up인가?
+
+ChatGPT Business 월간 플랜에서도 좌석 변경에 따른 비용 조정은 발생한다. 다만 OpenAI 도움말은 월간 플랜을 연간 플랜의 “월별 true-up 정산 주기”처럼 설명하지 않는다.
+
+월간 플랜은 다음 구조로 보는 것이 정확하다.
+
+- 월 과금 주기 시작 시 baseline standard seats 비용을 먼저 청구한다.
+- 월 중 baseline보다 좌석을 더 추가하면 추가 좌석은 남은 기간만큼 일할 계산된다.
+- 월 중 좌석을 줄여 baseline 아래로 내려가도 현재 월에는 baseline 비용이 유지된다.
+- 줄어든 좌석 수는 다음 월 청구일부터 새 baseline으로 반영된다.
+
+```text
+월간 플랜 예시
+1일차: 10 seats x $25 = $250
+10일차: 3 seats 추가
+추가분: 3 seats x $25 x 20/30 days = $50
+다음 invoice 총액: $375
+
+정리:
+월간 플랜 = baseline + 일할 계산
+연간 플랜 = 월별 true-up 정산 주기
+```
 
 ### ChatGPT Business annual 예시
 
