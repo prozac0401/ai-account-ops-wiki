@@ -34,3 +34,5 @@ GitHub Pages 진입 URL:
 https://prozac0401.github.io/ai-account-ops-wiki/
 
 `main` 브랜치에 push되면 GitHub Actions가 `npm ci`와 `npm run build`를 실행하고, `dist/` 결과물을 `gh-pages` 브랜치에 게시합니다.
+
+GitHub Pages가 처음이라 URL이 404로 보이면 저장소의 `Settings > Pages`에서 source를 `Deploy from a branch`, branch를 `gh-pages / root`로 한 번 지정하면 됩니다.
