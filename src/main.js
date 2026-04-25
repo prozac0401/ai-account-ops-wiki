@@ -2,6 +2,7 @@ import { marked } from "marked";
 import {
   ArrowLeft,
   ArrowRight,
+  ArrowUp,
   BookOpen,
   Building2,
   ChevronDown,
@@ -34,6 +35,7 @@ import "./styles.css";
 const lucideIcons = {
   ArrowLeft,
   ArrowRight,
+  ArrowUp,
   BookOpen,
   Building2,
   ChevronDown,
@@ -427,6 +429,10 @@ const state = {
   theme: localStorage.getItem("wiki-theme") || "light",
 };
 
+if ("scrollRestoration" in history) {
+  history.scrollRestoration = "manual";
+}
+
 marked.setOptions({
   async: false,
   breaks: false,
@@ -438,11 +444,12 @@ document.documentElement.dataset.theme = state.theme;
 renderShell();
 bindGlobalEvents();
 buildSearchIndex();
-loadRoute();
+loadRoute({ resetScroll: true });
 
-async function loadRoute() {
+async function loadRoute({ resetScroll = false } = {}) {
   const id = decodeRoute(location.hash) || "Home";
   const nextDoc = docById.get(id) || docByFileStem.get(id) || docById.get("Home");
+  const shouldResetScroll = resetScroll || nextDoc.id !== state.currentId;
   state.currentId = nextDoc.id;
   setActiveNav();
   closeNav();
@@ -453,10 +460,17 @@ async function loadRoute() {
   try {
     const markdown = await fetchDoc(nextDoc);
     renderPage(nextDoc, markdown);
+    if (shouldResetScroll) {
+      scrollToPageTop();
+    }
   } catch (error) {
     renderError(nextDoc, error);
+    if (shouldResetScroll) {
+      scrollToPageTop();
+    }
   } finally {
     page.classList.remove("is-loading");
+    updateScrollTopButton();
   }
 }
 
@@ -543,6 +557,9 @@ function renderShell() {
         </div>
       </div>
       <div class="toast" data-toast role="status" aria-live="polite"></div>
+      <button class="scroll-top-button" type="button" data-scroll-top aria-label="위로 가기" title="위로 가기">
+        <i data-lucide="arrow-up"></i>
+      </button>
     </div>
   `;
   createIcons({ icons: lucideIcons });
@@ -794,9 +811,12 @@ function bindGlobalEvents() {
   window.addEventListener("hashchange", () => {
     const id = decodeRoute(location.hash);
     if (docById.has(id) || docByFileStem.has(id) || !id) {
-      loadRoute();
+      loadRoute({ resetScroll: true });
     }
   });
+
+  window.addEventListener("scroll", updateScrollTopButton, { passive: true });
+  window.addEventListener("resize", updateScrollTopButton);
 
   document.addEventListener("click", (event) => {
     const routeLink = event.target.closest("[data-route]");
@@ -812,6 +832,7 @@ function bindGlobalEvents() {
     if (event.target.closest("[data-close-nav]")) closeNav();
     if (event.target.closest("[data-theme-toggle]")) toggleTheme();
     if (event.target.closest("[data-copy-link]")) copyCurrentLink();
+    if (event.target.closest("[data-scroll-top]")) scrollToPageTop({ smooth: true });
   });
 
   document.addEventListener("input", (event) => {
@@ -960,10 +981,25 @@ function setActiveNav() {
 function navigateTo(id) {
   if (decodeRoute(location.hash) === id) {
     loadRoute();
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    scrollToPageTop({ smooth: true });
     return;
   }
   location.hash = encodeURI(id);
+}
+
+function scrollToPageTop({ smooth = false } = {}) {
+  window.scrollTo({
+    top: 0,
+    left: 0,
+    behavior: smooth ? "smooth" : "auto",
+  });
+  updateScrollTopButton();
+}
+
+function updateScrollTopButton() {
+  const button = document.querySelector("[data-scroll-top]");
+  if (!button) return;
+  button.classList.toggle("is-visible", window.scrollY > 360);
 }
 
 function route(id) {

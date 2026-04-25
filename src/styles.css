@@ -1190,7 +1190,7 @@ svg {
 .toast {
   position: fixed;
   right: 24px;
-  bottom: 22px;
+  bottom: 84px;
   z-index: 50;
   padding: 12px 14px;
   border: 1px solid var(--line);
@@ -1210,6 +1210,50 @@ svg {
 .toast.is-visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+.scroll-top-button {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 45;
+  display: grid;
+  width: 46px;
+  height: 46px;
+  place-items: center;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--surface) 92%, transparent);
+  box-shadow: 0 14px 34px rgb(37 34 28 / 0.14);
+  color: var(--ink);
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(10px);
+  transition:
+    opacity 160ms ease,
+    transform 160ms ease,
+    border-color 160ms ease,
+    color 160ms ease;
+  backdrop-filter: blur(16px);
+}
+
+.scroll-top-button.is-visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.scroll-top-button:hover,
+.scroll-top-button:focus-visible {
+  border-color: var(--teal);
+  color: var(--teal-strong);
+  outline: 0;
+}
+
+.scroll-top-button svg {
+  width: 20px;
+  height: 20px;
 }
 
 .mobile-scrim {
@@ -1386,6 +1430,19 @@ svg {
 
   .meta-strip span:nth-child(n + 3) {
     border-top: 1px solid var(--line);
+  }
+
+  .toast {
+    right: 18px;
+    bottom: 78px;
+    left: 18px;
+  }
+
+  .scroll-top-button {
+    right: 18px;
+    bottom: 18px;
+    width: 44px;
+    height: 44px;
   }
 }
 
