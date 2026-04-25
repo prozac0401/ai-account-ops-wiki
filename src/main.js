@@ -156,13 +156,6 @@ const docs = [
     summary: "Workspace와 Colab 라이선스 구매, 할당, 결제 이슈를 정리합니다.",
   },
   {
-    id: "billing/실제_비용과_True_up",
-    title: "실제 비용과 True-up",
-    file: "billing/실제_비용과_True_up.md",
-    group: "과금",
-    summary: "서비스별 실제 단가, 사용자 추가·제거 과금, True-up 예시와 그래프를 정리합니다.",
-  },
-  {
     id: "billing/ChatGPT_OpenAI_API_과금",
     title: "ChatGPT·OpenAI API 과금",
     file: "billing/ChatGPT_OpenAI_API_과금.md",
@@ -175,6 +168,13 @@ const docs = [
     file: "billing/Cursor_과금.md",
     group: "과금",
     summary: "Cursor 팀 플랜의 결제, 좌석, 비용 회수 관점을 다룹니다.",
+  },
+  {
+    id: "billing/실제_비용과_True_up",
+    title: "실제 비용과 True-up",
+    file: "billing/실제_비용과_True_up.md",
+    group: "과금",
+    summary: "서비스별 실제 단가, 사용자 추가·제거 과금, True-up 예시와 그래프를 정리합니다.",
   },
   {
     id: "compliance/개인정보_고지_동의",
@@ -278,9 +278,9 @@ const sections = [
     docIds: [
       "billing/과금_전체_지도",
       "billing/Google_Workspace_Colab_과금",
-      "billing/실제_비용과_True_up",
       "billing/ChatGPT_OpenAI_API_과금",
       "billing/Cursor_과금",
+      "billing/실제_비용과_True_up",
     ],
   },
   {
