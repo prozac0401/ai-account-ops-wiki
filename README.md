@@ -29,4 +29,8 @@ npm run dev
 
 ## 배포
 
+GitHub Pages 진입 URL:
+
+https://prozac0401.github.io/ai-account-ops-wiki/
+
 `main` 브랜치에 push되면 GitHub Actions가 `npm ci`와 `npm run build`를 실행하고, `dist/` 결과물을 GitHub Pages에 배포합니다.
