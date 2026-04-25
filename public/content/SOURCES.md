@@ -19,7 +19,7 @@
 - Managing members, seat types, and roles in ChatGPT Business
   https://help.openai.com/en/articles/8542216-managing-members-seat-types-and-roles-in-chatgpt-business
 
-- Managing projects in the API platform
+- API 플랫폼의 API 작업 단위 관리
   https://help.openai.com/ko-kr/articles/9186755-api-%ED%94%8C%EB%9E%AB%ED%8F%BC%EC%97%90%EC%84%9C-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EA%B4%80%EB%A6%AC%ED%95%98%EA%B8%B0
 
 - OpenAI API account members
@@ -108,7 +108,7 @@
 - 개인정보 보호법 원문
   https://www.law.go.kr/LSW//lsLawLinkInfo.do?chrClsCd=010202&lsId=011357&lsJoLnkSeq=900078586&print=print
 
-## 프로젝트 내부 근거
+## 내부 근거
 
 - 2025-06-25 - 정보보안 교육 요청.md
 - 2025-07-01 - 수강생 개인정보 동의 안내.md
@@ -118,6 +118,6 @@
 ## 출처 사용 원칙
 
 - 공식 문서가 있는 내용은 공식 기준으로 적는다.
-- 결제 화면에서 관찰된 내용은 프로젝트 실제 사례로 적는다.
+- 결제 화면에서 관찰된 내용은 현장 실제 사례로 적는다.
 - 공식 문서에 없는 내용은 일반 규칙처럼 쓰지 않는다.
 - 정책은 바뀔 수 있으므로 구매·배포 직전 다시 확인한다.

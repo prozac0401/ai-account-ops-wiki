@@ -34,11 +34,11 @@ ChatGPT Business에는 표준 ChatGPT 좌석과 Codex 좌석이 구분된다.
 
 ## OpenAI API 사용량 과금
 
-API는 프로젝트별 사용량, 예산, rate limit 관리가 핵심이다.
+API는 API 작업 단위별 사용량, 예산, rate limit 관리가 핵심이다.
 
 운영자는 다음을 확인한다.
 
-- 프로젝트별 월 예산
+- API 작업 단위별 월 예산
 - 사용량 알림 기준
 - 모델별 사용 가능 여부
 - API 키 권한
@@ -55,14 +55,14 @@ OpenAI
 │  ├─ 수강생 표준 좌석
 │  └─ 운영자 좌석
 └─ OpenAI API usage
-   ├─ 교육용 프로젝트 예산
+   ├─ 교육용 API 작업 단위 예산
    ├─ 실습 서버 예산
    └─ 예비 크레딧
 ```
 
 ## 비용 폭주를 막는 방법
 
-- 교육용 API 프로젝트를 별도로 만든다.
+- 교육용 API 작업 단위를 별도로 만든다.
 - 예산을 낮게 잡고 알림을 켠다.
 - 수강생에게 개인 API 키를 직접 배포하지 않는다.
 - 필요한 경우 서버에서만 API 키를 보관한다.
@@ -87,5 +87,5 @@ OpenAI
 
 - ChatGPT Business billing and seats: https://help.openai.com/en/articles/8792536-managing-billing-and-seats-in-chatgpt-business
 - ChatGPT Business roles and seats: https://help.openai.com/en/articles/8542216-managing-members-seat-types-and-roles-in-chatgpt-business
-- OpenAI API projects: https://help.openai.com/ko-kr/articles/9186755-api-%ED%94%8C%EB%9E%AB%ED%8F%BC%EC%97%90%EC%84%9C-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EA%B4%80%EB%A6%AC%ED%95%98%EA%B8%B0
+- OpenAI API 작업 단위: https://help.openai.com/ko-kr/articles/9186755-api-%ED%94%8C%EB%9E%AB%ED%8F%BC%EC%97%90%EC%84%9C-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EA%B4%80%EB%A6%AC%ED%95%98%EA%B8%B0
 - OpenAI API org members: https://help.openai.com/en/articles/4936812-how-do-i-add-change-or-remove-members-on-my-openai-api-account

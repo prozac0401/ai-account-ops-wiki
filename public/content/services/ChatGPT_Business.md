@@ -28,9 +28,9 @@ ChatGPT Business와 OpenAI API는 별도다.
 | 구분 | ChatGPT Business | OpenAI API Platform |
 |---|---|---|
 | 주 사용자 | 사람 | 애플리케이션, 개발자, 시스템 |
-| 접근 방식 | ChatGPT 웹/앱 | API 키, 프로젝트, 서비스 계정 |
+| 접근 방식 | ChatGPT 웹/앱 | API 키, API 작업 단위, 서비스 계정 |
 | 과금 | 좌석 중심 | 사용량 중심 |
-| 관리 단위 | Workspace | Organization / Project |
+| 관리 단위 | Workspace | Organization / API 작업 단위 |
 | 흔한 실수 | API도 포함된다고 생각 | API 키를 개인 계정으로 공유 |
 
 ChatGPT Business 좌석을 샀다고 API 사용량이 포함되는 것은 아니다. API 사용량은 API Platform에서 별도로 청구된다.

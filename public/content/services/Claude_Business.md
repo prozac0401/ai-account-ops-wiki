@@ -9,7 +9,7 @@
 
 Claude Business 또는 Claude Team은 Anthropic의 팀용 Claude 서비스다.
 
-본 프로젝트의 중심 서비스는 Google Workspace, ChatGPT, Cursor, OpenAI API 쪽이지만, 이전 질의응답에서 Claude Business Plan도 함께 검토되었으므로 부록처럼 정리한다.
+이 위키의 중심 서비스는 Google Workspace, ChatGPT, Cursor, OpenAI API 쪽이지만, 이전 질의응답에서 Claude Business Plan도 함께 검토되었으므로 부록처럼 정리한다.
 
 ## 왜 함께 다루나
 

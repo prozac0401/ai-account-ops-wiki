@@ -72,9 +72,9 @@ const docs = [
     summary: "생성형 AI 교육 계정의 도입, 운영, 회수, 증빙을 한 곳에서 관리하는 운영 위키입니다.",
   },
   {
-    id: "00_프로젝트_개요",
-    title: "프로젝트 개요",
-    file: "00_프로젝트_개요.md",
+    id: "00_운영_배경",
+    title: "운영 배경",
+    file: "00_운영_배경.md",
     group: "운영 전체",
     summary: "교육용 생성형 AI 계정을 받고, 열어 주고, 쓰게 하고, 회수하는 전체 배경입니다.",
   },
@@ -125,7 +125,7 @@ const docs = [
     title: "OpenAI API Platform",
     file: "services/OpenAI_API.md",
     group: "서비스별",
-    summary: "조직, 프로젝트, API 키, 서비스 계정, 사용량 예산 운영 기준입니다.",
+    summary: "조직, API 작업 단위, API 키, 서비스 계정, 사용량 예산 운영 기준입니다.",
   },
   {
     id: "services/Cursor",
@@ -226,11 +226,11 @@ const docs = [
     summary: "교육 계정 운영에 맞춘 개인정보 고지서와 동의서 초안입니다.",
   },
   {
-    id: "qna/프로젝트_실제_QA",
-    title: "프로젝트 실제 Q&A",
-    file: "qna/프로젝트_실제_QA.md",
+    id: "qna/현장_실제_QA",
+    title: "현장 실제 Q&A",
+    file: "qna/현장_실제_QA.md",
     group: "양식과 Q&A",
-    summary: "프로젝트에서 실제로 나온 질문과 답변을 모았습니다.",
+    summary: "현장에서 실제로 나온 질문과 답변을 모았습니다.",
   },
   {
     id: "glossary",
@@ -252,7 +252,7 @@ const sections = [
   {
     label: "운영 전체",
     icon: "home",
-    docIds: ["Home", "00_프로젝트_개요", "01_운영_원칙", "02_서비스_전체_지도", "03_역할과_책임", "04_계정_생명주기"],
+    docIds: ["Home", "00_운영_배경", "01_운영_원칙", "02_서비스_전체_지도", "03_역할과_책임", "04_계정_생명주기"],
   },
   {
     label: "서비스별",
@@ -293,7 +293,7 @@ const sections = [
   {
     label: "양식과 Q&A",
     icon: "messages-square",
-    docIds: ["templates/수강생_안내문", "templates/개인정보_고지서_동의서", "qna/프로젝트_실제_QA", "glossary", "SOURCES"],
+    docIds: ["templates/수강생_안내문", "templates/개인정보_고지서_동의서", "qna/현장_실제_QA", "glossary", "SOURCES"],
   },
 ];
 
@@ -371,7 +371,7 @@ const lifecycleSteps = [
     title: "사용 목적과 기간 확인",
     detail: "수강생 수, 서비스, 결제 방식, 관리자 권한을 먼저 정리합니다.",
     icon: "file-text",
-    target: "00_프로젝트_개요",
+    target: "00_운영_배경",
   },
   {
     label: "검토",
@@ -414,7 +414,7 @@ const priorityDocs = [
   { label: "교육 전 체크", target: "education/교육담당자_운영_가이드" },
   { label: "수강생 안내", target: "templates/수강생_안내문" },
   { label: "동의서 초안", target: "templates/개인정보_고지서_동의서" },
-  { label: "실제 Q&A", target: "qna/프로젝트_실제_QA" },
+  { label: "실제 Q&A", target: "qna/현장_실제_QA" },
 ];
 
 const app = document.querySelector("#app");
