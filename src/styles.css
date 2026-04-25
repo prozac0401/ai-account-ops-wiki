@@ -1062,15 +1062,15 @@ svg {
   margin-right: 8px;
   color: var(--teal-strong);
   font-family: var(--mono);
-  font-size: 0.78em;
+  font-size: 16px;
   font-weight: 900;
+  line-height: 1.35;
   white-space: nowrap;
 }
 
 .article-body h3 .heading-number {
   min-width: 2.8em;
   color: var(--faint);
-  font-size: 0.76em;
 }
 
 .heading-anchor {
