@@ -39,7 +39,7 @@ jobs:
           mkdir -p /tmp/ai-account-ops-wiki-pages
           cp -R dist/. /tmp/ai-account-ops-wiki-pages/
           git switch --orphan gh-pages
-          git rm -rf .
+          git rm -rf . || true
           cp -R /tmp/ai-account-ops-wiki-pages/. .
           touch .nojekyll
           git add .
