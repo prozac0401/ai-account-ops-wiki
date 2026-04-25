@@ -1,7 +1,7 @@
 # AI 계정 운영
 
 > 상위 문서: 없음
-> 분류: AI 계정 운영 / 생성형 AI 교육 운영 / SaaS 계정 관리
+> 분류: AI 계정 운영 / 생성형 AI 교육 운영 / SaaS(Software as a Service) 계정 관리
 
 [목차]
 
@@ -34,7 +34,7 @@
 | ChatGPT Business | 팀 워크스페이스, 좌석, 멤버 초대, 데이터 처리, 수강생 사용 |
 | OpenAI API Platform | 조직, API 작업 단위, API 키, 서비스 계정, 사용량 예산 |
 | Cursor | AI 코드 편집기, 팀 결제, Privacy Mode, 코드/프롬프트 취급 |
-| Claude Business / Team | 유사 LLM 팀 서비스, 데이터 보존, 소유자 권한, 부록 성격 |
+| Claude Business / Team | 유사 LLM(Large Language Model) 팀 서비스, 데이터 보존, 소유자 권한, 부록 성격 |
 
 ## 빠른 이동
 
@@ -92,6 +92,13 @@
 3. [[04_계정_생명주기|계정 생명주기]]
 4. [[compliance/개인정보_고지_동의|개인정보 고지와 동의]]
 5. 실제로 쓰는 서비스별 문서
+
+## 약어 각주
+
+| 약어 | 전체 단어 | 설명 |
+|---|---|---|
+| SaaS | Software as a Service | 설치형 소프트웨어가 아니라 웹 서비스 형태로 구독해 쓰는 소프트웨어다. |
+| LLM | Large Language Model | 대량의 텍스트를 학습해 문장을 이해하고 생성하는 대규모 언어 모델이다. |
 
 ## 한 줄 요약
 

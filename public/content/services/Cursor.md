@@ -24,11 +24,11 @@ Cursor는 AI 기능이 들어간 코드 편집기다.
 
 ## 플랜 구조
 
-Cursor 가격 페이지 기준으로 Teams 플랜은 사용자당 월 구독 형태이며, 공유 chats/commands/rules, 중앙 팀 결제, 사용량 분석, 조직 단위 Privacy Mode 제어, RBAC, SAML/OIDC SSO 등을 포함한다. 2026-04-25 기준 공식 가격 페이지에서 개인 Pro는 `$20/month`, Teams는 `$40/user/month`로 구분된다. 포함 사용량 이후에는 on-demand usage가 후불 청구될 수 있다.
+Cursor 가격 페이지 기준으로 Teams 플랜은 사용자당 월 구독 형태이며, 공유 chats/commands/rules, 중앙 팀 결제, 사용량 분석, 조직 단위 Privacy Mode 제어, RBAC(Role-Based Access Control), SAML(Security Assertion Markup Language)/OIDC(OpenID Connect) 기반 SSO(Single Sign-On) 등을 포함한다. 2026-04-25 기준 공식 가격 페이지에서 개인 Pro는 `$20/month`, Teams는 `$40/user/month`로 구분된다. 포함 사용량 이후에는 on-demand usage가 후불 청구될 수 있다.
 
 Team에서 On-demand usage를 허용하면 설정과 월 한도는 팀 전체 단위로 관리한다. 수강생별로 on-demand 한도를 다르게 주는 방식으로 운영하기 어렵기 때문에, 교육 운영자는 팀 전체 한도를 낮게 두고 사용량 대시보드로 많이 쓰는 사용자를 따로 확인한다.
 
-Enterprise는 여기에 pooled usage, invoice/PO billing, SCIM seat management, audit logs, 더 세밀한 관리자·모델 제어 등이 추가된다. 팀 전체 공유 사용량, 세밀한 보안 통제, 감사 로그가 필요하면 Enterprise 검토 대상이다.
+Enterprise는 여기에 pooled usage, invoice/PO(Purchase Order) billing, SCIM(System for Cross-domain Identity Management) seat management, audit logs, 더 세밀한 관리자·모델 제어 등이 추가된다. 팀 전체 공유 사용량, 세밀한 보안 통제, 감사 로그가 필요하면 Enterprise 검토 대상이다.
 
 ## 역할과 Unpaid Admin
 
@@ -84,8 +84,8 @@ Cursor는 코드베이스 인덱싱을 제공한다. 보안 문서에 따르면 
 
 - 팀 플랜으로 운영한다.
 - Privacy Mode를 조직 단위로 켠다.
-- 가능하면 SSO를 쓴다.
-- Enterprise가 아니면 SCIM·감사로그 제한을 감안한다.
+- 가능하면 SSO(Single Sign-On)를 쓴다.
+- Enterprise가 아니면 SCIM(System for Cross-domain Identity Management)·감사로그 제한을 감안한다.
 - 수강생에게 개인 Cursor Pro를 쓰게 하지 않는다.
 
 ### 레포 운영
@@ -165,7 +165,7 @@ Cursor Desktop 로그인 이력은 Windows 사용자 폴더의 `%LOCALAPPDATA%` 
 - included usage와 Free/Bonus usage 소진 상태
 - 운영자 계정의 Unpaid Admin 전환 가능 여부
 - Privacy Mode 설정
-- SSO 설정 여부
+- SSO(Single Sign-On) 설정 여부
 - 결제 상태
 - 교육 종료 후 멤버 제거 여부
 
@@ -190,11 +190,22 @@ Cursor Desktop 로그인 이력은 Windows 사용자 폴더의 `%LOCALAPPDATA%` 
 
 ### SSO가 꼭 필요한가?
 
-수강생이 개인 Gmail을 쓰는 단기 교육이라면 SSO가 어려울 수 있다. 그러나 조직 계정으로 운영하는 장기 과정이라면 SSO/SCIM이 있는 Enterprise 쪽이 관리가 쉽다.
+수강생이 개인 Gmail을 쓰는 단기 교육이라면 SSO(Single Sign-On)가 어려울 수 있다. 그러나 조직 계정으로 운영하는 장기 과정이라면 SSO(Single Sign-On)/SCIM(System for Cross-domain Identity Management)이 있는 Enterprise 쪽이 관리가 쉽다.
 
 ### Cursor는 공식 리셀러에서 살 수 있나?
 
 Cursor 가격 페이지는 구독이 cursor.com에서만 직접 판매되며, 리셀러나 제3자 판매를 승인하지 않는다고 안내한다. 구매 경로를 확인해야 한다.
+
+## 약어 각주
+
+| 약어 | 전체 단어 | 설명 |
+|---|---|---|
+| RBAC | Role-Based Access Control | 역할별로 접근 권한을 나누어 부여하는 권한 관리 방식이다. |
+| SAML | Security Assertion Markup Language | 조직 계정과 외부 서비스를 연결할 때 쓰는 인증 연동 표준이다. |
+| OIDC | OpenID Connect | OAuth 2.0 기반의 사용자 인증 연동 표준이다. |
+| SSO | Single Sign-On | 조직 계정 하나로 여러 서비스에 로그인하게 하는 인증 방식이다. |
+| PO | Purchase Order | 구매 주문서다. 기업 구매 절차에서 인보이스 결제와 함께 등장한다. |
+| SCIM | System for Cross-domain Identity Management | 사용자 생성, 수정, 삭제를 자동화하는 계정 관리 표준이다. |
 
 ## 출처
 
