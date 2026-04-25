@@ -94,6 +94,12 @@
 - How will I be billed for Claude API use?
   https://support.claude.com/en/articles/8114526-how-will-i-be-billed-for-claude-api-use
 
+- How is my Team plan bill calculated?
+  https://support.claude.com/en/articles/9267289-how-is-my-team-plan-bill-calculated
+
+- Purchase and manage seats on Team plans
+  https://support.claude.com/en/articles/12004354-purchase-and-manage-seats-on-team-plans
+
 - How long do you store my organization's data?
   https://privacy.claude.com/en/articles/7996866-how-long-do-you-store-my-organization-s-data
 

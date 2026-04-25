@@ -46,8 +46,10 @@
 |---|---|---|
 | Google Workspace Flexible | 추가한 날부터 일할 계산 | 삭제 또는 라이선스 제거 시 일할 계산으로 줄어듦 |
 | ChatGPT Business monthly | baseline 초과 좌석은 일할 계산 | 현재 월에는 baseline 비용이 유지되고 다음 청구일에 반영 |
-| Claude Team monthly | 추가·제거 즉시 일할 청구 또는 크레딧 | 제거하면 접근은 즉시 끝나고 일할 크레딧 가능 |
+| Claude Team monthly | 멤버 추가 또는 좌석 업그레이드는 남은 기간 일할 청구 | 멤버 제거만으로 즉시 크레딧/환불 없음. 좌석은 다른 멤버에게 재배정 가능 |
 | Cursor Teams self-serve | 남은 기간만큼 prorated 비용 계산, credit 우선 차감 | unused 기간은 credit 반영 가능. 이미 credit을 쓴 멤버는 주기 끝까지 seat가 점유될 수 있음 |
+
+Claude Team은 “멤버 제거”와 “총 좌석 수 감소”를 구분한다. Claude 공식 Billing 문서와 Team seat 관리 문서는 멤버를 제거해도 즉시 크레딧이나 환불이 발생하지 않고, 해당 좌석이 다른 멤버에게 배정 가능한 상태가 된다고 안내한다. 비용을 실제로 줄이려면 Billing 또는 Organization 설정에서 total seat allocation을 줄이는 절차를 별도로 확인한다.
 
 ### 월 단위 그래프
 
@@ -259,6 +261,7 @@ Google Workspace 도움말은 “True-up”이라는 말보다 prorated payment,
 - True-up 기준일과 기준 좌석 수를 기록한다.
 - On-demand usage 또는 extra usage가 켜져 있으면 월 한도를 낮게 둔다.
 - 구매 직전 Billing 화면과 결제 후 인보이스를 PDF로 저장한다.
+- Claude Team은 멤버 제거만 했는지, total seat allocation까지 줄였는지 구분해서 기록한다.
 
 ## 출처
 
@@ -272,5 +275,6 @@ Google Workspace 도움말은 “True-up”이라는 말보다 prorated payment,
 - Cursor Members and Roles: https://docs.cursor.com/account/teams/members/
 - Cursor Billing: https://docs.cursor.com/en/account/billing
 - Claude Pricing: https://claude.com/pricing
-- Claude Team billing: https://support.anthropic.com/en/articles/9267289-how-is-my-team-plan-bill-calculated
+- Claude Team billing: https://support.claude.com/en/articles/9267289-how-is-my-team-plan-bill-calculated
+- Claude Team seat management: https://support.claude.com/en/articles/12004354-purchase-and-manage-seats-on-team-plans
 - Claude extra usage: https://support.anthropic.com/en/articles/12005970-extra-usage-for-claude-for-work-team-and-enterprise-plans
