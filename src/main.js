@@ -1036,7 +1036,7 @@ function updateTocActive() {
     .filter(Boolean);
   if (!headings.length) return;
 
-  const readingLine = window.scrollY + 118;
+  const readingLine = window.scrollY + 150;
   const activeHeading =
     [...headings].reverse().find((heading) => heading.offsetTop <= readingLine) || headings[0];
 
