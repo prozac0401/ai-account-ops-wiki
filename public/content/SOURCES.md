@@ -68,6 +68,9 @@
 - Auto-pay with a credit card
   https://knowledge.workspace.google.com/admin/billing/auto-pay-with-a-credit-card
 
+- Fix payment and billing issues
+  https://support.google.com/a/answer/2523116
+
 - Verify your payment information
   https://knowledge.workspace.google.com/admin/billing/verify-your-payment-information
 
@@ -84,6 +87,12 @@
   https://support.google.com/accounts/answer/6294825?hl=ko
 
 ## Anthropic / Claude
+
+- Paid Plan Billing FAQs
+  https://support.claude.com/en/articles/8325618-paid-plan-billing-faqs
+
+- How will I be billed for Claude API use?
+  https://support.claude.com/en/articles/8114526-how-will-i-be-billed-for-claude-api-use
 
 - How long do you store my organization's data?
   https://privacy.claude.com/en/articles/7996866-how-long-do-you-store-my-organization-s-data

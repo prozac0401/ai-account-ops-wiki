@@ -170,6 +170,13 @@ const docs = [
     summary: "Cursor 팀 플랜의 결제, 좌석, 비용 회수 관점을 다룹니다.",
   },
   {
+    id: "billing/해외_결제_차단_대응",
+    title: "해외 결제 차단 대응",
+    file: "billing/해외_결제_차단_대응.md",
+    group: "과금",
+    summary: "해외 카드 결제 차단, 카드사 확인, 대체 결제 경로와 현장 대응을 정리합니다.",
+  },
+  {
     id: "billing/실제_비용과_True_up",
     title: "실제 비용과 True-up",
     file: "billing/실제_비용과_True_up.md",
@@ -280,6 +287,7 @@ const sections = [
       "billing/Google_Workspace_Colab_과금",
       "billing/ChatGPT_OpenAI_API_과금",
       "billing/Cursor_과금",
+      "billing/해외_결제_차단_대응",
       "billing/실제_비용과_True_up",
     ],
   },

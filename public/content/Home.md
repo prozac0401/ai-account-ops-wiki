@@ -60,6 +60,7 @@
 - [[billing/Google_Workspace_Colab_과금|Google Workspace·Colab 과금]]
 - [[billing/ChatGPT_OpenAI_API_과금|ChatGPT·OpenAI API 과금]]
 - [[billing/Cursor_과금|Cursor 과금]]
+- [[billing/해외_결제_차단_대응|해외 결제 차단 대응]]
 - [[billing/실제_비용과_True_up|실제 비용과 True-up]]
 
 ### 컴플라이언스
