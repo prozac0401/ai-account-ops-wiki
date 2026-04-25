@@ -58,6 +58,7 @@
 
 - [[billing/과금_전체_지도|과금 운영 개요]]
 - [[billing/Google_Workspace_Colab_과금|Google Workspace·Colab 과금]]
+- [[billing/실제_비용과_True_up|실제 비용과 True-up]]
 - [[billing/ChatGPT_OpenAI_API_과금|ChatGPT·OpenAI API 과금]]
 - [[billing/Cursor_과금|Cursor 과금]]
 

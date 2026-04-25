@@ -29,6 +29,31 @@ Cloud Identity Free 라이선스는 무료 ID 라이선스로 남을 수 있다.
 6. 새 사용자 생성 테스트를 한다.
 7. 의도치 않게 유료 라이선스가 붙는지 확인한다.
 
+### 실제 부과 비용
+
+2026-04-25 기준 Google Workspace Business 플랜의 표준 USD 가격은 다음과 같이 안내된다.
+
+| 플랜 | Flexible Plan | Annual/Fixed-Term Plan |
+|---|---:|---:|
+| Business Starter | $8.40/user/month | $7/user/month 또는 $84/user/year |
+| Business Standard | $16.80/user/month | $14/user/month 또는 $168/user/year |
+| Business Plus | $26.40/user/month | $22/user/month 또는 $264/user/year |
+
+Flexible Plan은 사용자 수가 변동되는 단기 교육에 유리하다. Annual/Fixed-Term Plan은 단가가 낮지만, 약정한 라이선스 수를 계약 중간에 줄여 비용을 낮추기 어렵다.
+
+예를 들어 Business Starter Flexible로 52명을 한 달 운영하면 `52 x $8.40 = $436.80/month` 수준이다.
+
+```text
+52명 Business Starter Flexible
+52 seats x $8.40 = $436.80/month
+```
+
+### 사용자 추가·제거 과금
+
+Google Workspace는 Flexible Plan에서 월 중 사용자 추가·제거를 일할 계산한다. 예를 들어 4월 1일에 추가하고 4월 15일에 삭제하면 약 반 달만 청구되는 식이다.
+
+Annual/Fixed-Term Plan에서는 사용자를 삭제해도 구매한 라이선스 수가 줄어드는 것은 아니다. 삭제한 사용자의 라이선스를 다른 사용자에게 재할당할 수 있지만, 라이선스 수 자체를 줄여 비용을 낮추는 것은 보통 갱신 시점에 가능하다.
+
 ## 카드 결제
 
 Google Admin console의 Billing → Payment accounts에서 결제 수단을 관리한다.
@@ -76,6 +101,19 @@ Colab Pro/Pro+는 Google Admin console의 Billing → Buy or upgrade → More pr
 
 Colab Pro 결제 초기에 2개만 구매 가능한 것처럼 보이는 상황을 경험한 적이 있다. 이 내용은 실제 사례로 남기되, 일반 규칙으로 쓰지 않는다.
 
+### Colab 실제 부과 비용
+
+Google Workspace add-ons 문서 기준 Colab Pro/Pro+의 사용자당 월 비용은 다음과 같다.
+
+| 서비스 | Annual/Fixed-Term Plan | Flexible Plan | compute units |
+|---|---:|---:|---:|
+| Colab Pro | $8.33/user/month | $9.99/user/month | 100/month |
+| Colab Pro+ | $41.66/user/month | $49.99/user/month | 500/month |
+
+예를 들어 52명에게 Colab Pro Flexible을 붙이면 `52 x $9.99 = $519.48/month` 수준이다. Colab Pro+ Flexible은 `52 x $49.99 = $2,599.48/month` 수준까지 올라간다.
+
+Colab은 “서비스 ON”과 “유료 라이선스 할당”이 별개다. 비용은 유료 라이선스를 몇 명에게 할당했는지와 결제 플랜을 기준으로 본다.
+
 ## 인보이스와 회계 처리
 
 인보이스는 보통 Billing → Payment accounts 쪽에서 확인한다.
@@ -112,5 +150,9 @@ Cloud Identity Free 자체는 무료 라이선스다. 하지만 같은 사용자
 - Colab Pro/Pro+ 설정: https://knowledge.workspace.google.com/admin/colab/set-up-colab-pro
 - Colab 라이선스 할당: https://knowledge.workspace.google.com/admin/colab/assign-colab-licenses-to-users?hl=ko
 - Flexible Plan 90일 제한과 50% 수동 결제: https://knowledge.workspace.google.com/admin/billing/flexible-plan
+- Google Workspace 결제 플랜: https://support.google.com/a/answer/1247360?hl=en-IE
+- Google Workspace 청구 이해: https://knowledge.workspace.google.com/admin/billing/understand-google-workspace-bills-and-charges
+- Google Workspace Annual/Fixed-Term Plan: https://knowledge.workspace.google.com/admin/billing/annual-fixed-term-plan
+- Google Workspace add-ons and Colab pricing: https://support.google.com/a/answer/13177581?hl=en
 - 카드 결제: https://knowledge.workspace.google.com/admin/billing/auto-pay-with-a-credit-card
 - 결제 정보 검증: https://knowledge.workspace.google.com/admin/billing/verify-your-payment-information

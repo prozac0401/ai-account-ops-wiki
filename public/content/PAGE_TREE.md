@@ -16,6 +16,7 @@ AI 계정 운영
 ├─ 과금
 │  ├─ 과금 운영 개요
 │  ├─ Google Workspace·Colab 과금
+│  ├─ 실제 비용과 True-up
 │  ├─ ChatGPT·OpenAI API 과금
 │  └─ Cursor 과금
 ├─ 컴플라이언스
