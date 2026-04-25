@@ -404,13 +404,16 @@ svg {
 
 .content-grid {
   display: grid;
+  width: min(100%, 1320px);
   grid-template-columns: minmax(0, 1fr) 260px;
   gap: 0;
+  margin-inline: auto;
 }
 
 .page {
+  width: 100%;
   min-width: 0;
-  max-width: 1010px;
+  max-width: none;
   padding: 26px 46px 80px 32px;
   outline: 0;
 }
