@@ -17,6 +17,7 @@ npm run dev
 - `src/main.js`: 문서 라우팅, 검색, Markdown 렌더링, 목차 생성
 - `src/styles.css`: 위키 화면 스타일
 - `index.html`: 앱 진입점
+- [Help.md](Help.md): GitHub에서만 보는 문서 반영·링크·배포 도움말
 
 ## 기능
 
