@@ -1062,9 +1062,9 @@ svg {
   margin-right: 8px;
   color: var(--teal-strong);
   font-family: var(--mono);
-  font-size: 16px;
+  font-size: inherit;
   font-weight: 900;
-  line-height: 1.35;
+  line-height: inherit;
   white-space: nowrap;
 }
 
@@ -1174,7 +1174,7 @@ svg {
 .toc-number {
   color: var(--teal-strong);
   font-family: var(--mono);
-  font-size: 12px;
+  font-size: inherit;
   font-weight: 900;
   white-space: nowrap;
 }
