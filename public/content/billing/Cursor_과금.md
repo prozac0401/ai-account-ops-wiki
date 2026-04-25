@@ -191,7 +191,7 @@ Cursor 가격 페이지는 self-serve 플랜이 주요 신용카드와 체크카
 
 ### 인보이스가 필요한데 Teams로 되나?
 
-Cursor 가격 페이지는 self-serve는 카드 결제, 인보이스/wire는 Enterprise 문의로 안내한다. 회계상 인보이스가 필수라면 처음부터 Enterprise를 검토한다.
+Cursor 가격 페이지는 self-serve는 카드 결제, 인보이스/wire는 Enterprise 문의로 안내한다. 회계상 인보이스가 필수라면 처음부터 Enterprise를 검토한다. 단, Enterprise는 최소 150인 이상 가입을 요하고 연단위 결제가 필요하므로, 단기 교육 좌석만으로는 조건과 비용이 맞는지 먼저 확인한다.
 
 ### 수강생 개인 결제로 처리해도 되나?
 
