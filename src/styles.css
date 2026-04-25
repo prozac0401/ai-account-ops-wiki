@@ -1058,8 +1058,8 @@ svg {
 
 .heading-number {
   display: inline-block;
-  min-width: 2.2em;
-  margin-right: 8px;
+  min-width: 0;
+  margin-right: 0.2em;
   color: var(--teal-strong);
   font-family: var(--mono);
   font-size: inherit;
@@ -1069,7 +1069,7 @@ svg {
 }
 
 .article-body h3 .heading-number {
-  min-width: 2.8em;
+  min-width: 0;
   color: var(--faint);
 }
 
@@ -1163,7 +1163,7 @@ svg {
 .toc-link {
   display: grid;
   grid-template-columns: auto minmax(0, 1fr);
-  column-gap: 8px;
+  column-gap: 6px;
   padding: 7px 0 7px 10px;
   border-left: 2px solid transparent;
   color: var(--muted);
