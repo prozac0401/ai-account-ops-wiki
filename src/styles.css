@@ -1360,7 +1360,7 @@ svg {
     grid-template-columns: 40px minmax(0, 1fr) auto;
     gap: 10px;
     min-height: 66px;
-    overflow: hidden;
+    overflow: visible;
     padding: 0 14px;
   }
 
@@ -1386,6 +1386,18 @@ svg {
 
   .search-wrap {
     height: 42px;
+  }
+
+  .search-panel {
+    position: fixed;
+    top: 62px;
+    right: 14px;
+    left: 14px;
+    z-index: 30;
+    max-height: calc(100dvh - 84px);
+    overflow-x: hidden;
+    overflow-y: auto;
+    overscroll-behavior: contain;
   }
 
   .search-wrap kbd {

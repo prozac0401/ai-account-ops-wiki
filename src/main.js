@@ -834,6 +834,7 @@ function bindGlobalEvents() {
       const id = routeLink.dataset.route;
       if (docById.has(id)) {
         event.preventDefault();
+        closeSearch();
         navigateTo(id);
       }
     }
