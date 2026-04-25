@@ -24,7 +24,7 @@ Cursor는 AI 기능이 들어간 코드 편집기다.
 
 ## 플랜 구조
 
-Cursor 가격 페이지 기준으로 Teams 플랜은 사용자당 월 구독 형태이며, 공유 chats/commands/rules, 중앙 팀 결제, 사용량 분석, 조직 단위 Privacy Mode 제어, RBAC, SAML/OIDC SSO 등을 포함한다. 현재 Team 문서에는 좌석별 $20 included usage와 포함 사용량 이후의 on-demand usage 구조가 안내된다.
+Cursor 가격 페이지 기준으로 Teams 플랜은 사용자당 월 구독 형태이며, 공유 chats/commands/rules, 중앙 팀 결제, 사용량 분석, 조직 단위 Privacy Mode 제어, RBAC, SAML/OIDC SSO 등을 포함한다. 2026-04-25 기준 공식 가격 페이지에서 개인 Pro는 `$20/month`, Teams는 `$40/user/month`로 구분된다. 포함 사용량 이후에는 on-demand usage가 후불 청구될 수 있다.
 
 Team에서 On-demand usage를 허용하면 설정과 월 한도는 팀 전체 단위로 관리한다. 수강생별로 on-demand 한도를 다르게 주는 방식으로 운영하기 어렵기 때문에, 교육 운영자는 팀 전체 한도를 낮게 두고 사용량 대시보드로 많이 쓰는 사용자를 따로 확인한다.
 
