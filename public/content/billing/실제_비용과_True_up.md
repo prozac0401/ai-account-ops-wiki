@@ -47,7 +47,7 @@
 | Google Workspace Flexible | 추가한 날부터 일할 계산 | 삭제 또는 라이선스 제거 시 일할 계산으로 줄어듦 |
 | ChatGPT Business monthly | baseline 초과 좌석은 일할 계산 | 현재 월에는 baseline 비용이 유지되고 다음 청구일에 반영 |
 | Claude Team monthly | 추가·제거 즉시 일할 청구 또는 크레딧 | 제거하면 접근은 즉시 끝나고 일할 크레딧 가능 |
-| Cursor Teams self-serve | 좌석 추가 시 비용 증가 | 실제 화면과 계약 조건 확인. 팀 내 재배정은 별도 비용 없이 처리될 수 있음 |
+| Cursor Teams self-serve | 남은 기간만큼 prorated 비용 계산, credit 우선 차감 | unused 기간은 credit 반영 가능. 이미 credit을 쓴 멤버는 주기 끝까지 seat가 점유될 수 있음 |
 
 ### 월 단위 그래프
 
@@ -148,18 +148,22 @@ Active users
 
 이후 baseline은 8석으로 올라간다. 다음 달에 2명을 제거해도 8석 baseline 아래로 내려간 사용분은 즉시 환불되는 구조로 보지 않는다.
 
-### Cursor true-up 예시
+### Cursor prorated credit 예시
 
-Cursor Pricing Policy는 Subscription Services의 True Up을 True Up Period 마지막 30일의 Active Users 기준으로 계산한다고 설명한다. 라이선스 재배정은 30일 True Up Period 안의 Active Users가 기존 Core License seat count를 넘지 않으면 추가 비용이 없을 수 있다.
+Cursor Teams self-serve는 True-up으로 나중에 한 번에 정산되는 구조라기보다, 사용자를 추가하거나 제거할 때 prorated 비용 또는 credit이 바로 반영되는 구조로 본다.
 
-예를 들어 Teams를 $40/user/month로 20석 운영한다고 가정한다. 12개월 기간 중 4개월차 말 기준 Active Users가 28명이고 남은 기간이 8개월이면, 단순 좌석료만 보면 다음처럼 설명할 수 있다.
+예를 들어 Teams를 $40/user/month로 20석 운영 중이고, 결제 주기 30일 중 10일차에 8명을 추가하면 남은 20일에 대해서만 비용이 계산된다.
 
 ```text
-초과 좌석: 28 active users - 20 baseline = 8 seats
-남은 기간 좌석료: 8 seats x $40 x 8 months = $2,560
+추가 좌석: 8 seats
+남은 기간: 20/30 days
+prorated 비용: 8 x $40 x 20/30 = $213.33
+
+credit 잔액이 $100이면:
+$213.33 - $100 credit = $113.33 결제 발생
 ```
 
-실제 Cursor 계약에서는 여기에 Precommitted Usage Fee 또는 On-demand Usage가 함께 붙을 수 있으므로, 최종 금액은 Order Form과 Billing 화면을 확인한다.
+따라서 Cursor는 ChatGPT Business annual의 monthly true-up 예시와 같은 방식으로 설명하지 않는다. Billing 화면에서 credit 잔액, pending invoice, paid members, on-demand usage를 즉시 확인한다.
 
 ### Cursor Unpaid Admin 예시
 
@@ -242,8 +246,8 @@ Google Workspace 도움말은 “True-up”이라는 말보다 prorated payment,
 - ChatGPT Business billing and seats: https://help.openai.com/en/articles/8792536-managing-billing-and-seats-in-chatgpt-business
 - OpenAI API pricing: https://platform.openai.com/docs/pricing
 - Cursor Pricing: https://cursor.com/pricing
-- Cursor Pricing Policy: https://cursor.com/terms/pricing
 - Cursor Members and Roles: https://docs.cursor.com/account/teams/members/
+- Cursor Billing: https://docs.cursor.com/en/account/billing
 - Claude Pricing: https://claude.com/pricing
 - Claude Team billing: https://support.anthropic.com/en/articles/9267289-how-is-my-team-plan-bill-calculated
 - Claude extra usage: https://support.anthropic.com/en/articles/12005970-extra-usage-for-claude-for-work-team-and-enterprise-plans
