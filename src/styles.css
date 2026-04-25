@@ -983,7 +983,7 @@ svg {
 }
 
 .wiki-footnote-ref {
-  margin-left: 2px;
+  margin-left: 0;
   font-size: 0.78em;
   line-height: 0;
   vertical-align: super;

@@ -71,7 +71,7 @@
 본문 예시:
 
 ```md
-DLP(Data Loss Prevention)<sup class="wiki-footnote-ref"><a class="wiki-footnote-link" id="abbr-ref-1" href="#abbr-note-1">[1]</a></sup>
+DLP(Data Loss Prevention) <sup class="wiki-footnote-ref"><a class="wiki-footnote-link" id="abbr-ref-1" href="#abbr-note-1">[1]</a></sup>
 ```
 
 하단 예시:
@@ -80,17 +80,18 @@ DLP(Data Loss Prevention)<sup class="wiki-footnote-ref"><a class="wiki-footnote-
 ## 약어 각주
 
 <div class="wiki-footnotes">
-<p class="wiki-footnote" id="abbr-note-1"><a class="wiki-footnote-link" href="#abbr-ref-1">[1]</a> - DLP(Data Loss Prevention): 민감정보가 외부로 나가지 않도록 탐지하거나 차단하는 보안 기능이다.</p>
+<p class="wiki-footnote" id="abbr-note-1"><a class="wiki-footnote-link" href="#abbr-ref-1">[1]</a> DLP(Data Loss Prevention): 민감정보가 외부로 나가지 않도록 탐지하거나 차단하는 보안 기능이다.</p>
 </div>
 ```
 
 작성 규칙은 다음과 같습니다.
 
 - 번호는 문서마다 `1`부터 시작합니다.
+- 본문 단어와 `<sup class="wiki-footnote-ref">` 사이에는 공백을 1칸만 둡니다.
 - 본문의 `abbr-ref-1`, `abbr-note-1`과 하단의 번호를 맞춥니다.
 - 각주는 본문에 처음 등장하는 순서대로 붙입니다.
 - 같은 약어가 여러 번 나오면 보통 첫 번째 의미 있는 위치에만 각주를 답니다.
-- 하단 설명은 표로 만들지 않고 `[번호] - 설명` 형태로 씁니다.
+- 하단 설명은 표로 만들지 않고 `[번호] 설명` 형태로 씁니다. `[번호]` 뒤에 하이픈은 넣지 않습니다.
 - `## 약어 각주`는 보통 `## 참고 출처` 바로 위에 둡니다.
 
 ## 링크
@@ -124,6 +125,6 @@ DLP(Data Loss Prevention)<sup class="wiki-footnote-ref"><a class="wiki-footnote-
 - 새 문서가 `src/main.js`의 `docs`와 `sections`에 등록되어 있다.
 - 제목에 수동 번호가 중복으로 들어가지 않았다.
 - 내부 링크의 `id`가 실제 등록값과 같다.
-- 약어 각주는 표가 아니라 `[번호] - 설명` 형태다.
+- 약어 각주는 표가 아니라 `[번호] 설명` 형태다.
 - 공식 정책이나 가격을 바꿨다면 참고 출처를 확인했다.
 - 배포 후 GitHub `Actions`가 성공했는지 확인했다.
