@@ -93,13 +93,11 @@
 4. [[compliance/개인정보_고지_동의|개인정보 고지와 동의]]
 5. 실제로 쓰는 서비스별 문서
 
-## 약어 각주
+## 한 줄 요약
+
+초대는 쉽다. 문제는 **결제, 회수, 삭제, 증빙**이다.
 
 <div class="wiki-footnotes">
 <p class="wiki-footnote" id="abbr-note-1"><a class="wiki-footnote-link" href="#abbr-ref-1">[1]</a> SaaS(Software as a Service): 설치형 소프트웨어가 아니라 웹 서비스 형태로 구독해 쓰는 소프트웨어다.</p>
 <p class="wiki-footnote" id="abbr-note-2"><a class="wiki-footnote-link" href="#abbr-ref-2">[2]</a> LLM(Large Language Model): 대량의 텍스트를 학습해 문장을 이해하고 생성하는 대규모 언어 모델이다.</p>
 </div>
-
-## 한 줄 요약
-
-초대는 쉽다. 문제는 **결제, 회수, 삭제, 증빙**이다.

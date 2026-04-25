@@ -151,8 +151,6 @@ AI 서비스 계정은 발급하지 않는다.
 
 이렇게 해야 나중에 실제 사례가 공식 규칙처럼 굳어지는 일을 막을 수 있다.
 
-## 약어 각주
-
 <div class="wiki-footnotes">
 <p class="wiki-footnote" id="abbr-note-1"><a class="wiki-footnote-link" href="#abbr-ref-1">[1]</a> DPA(Data Processing Addendum): 개인정보 처리와 보호 조치를 정리한 계약 부속 문서다.</p>
 <p class="wiki-footnote" id="abbr-note-2"><a class="wiki-footnote-link" href="#abbr-ref-2">[2]</a> SCC(Standard Contractual Clauses): 국외 이전 등에서 쓰이는 표준계약조항이다.</p>

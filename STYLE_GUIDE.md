@@ -34,8 +34,6 @@
 
 ## 자주 헷갈리는 점
 
-## 약어 각주
-
 ## 참고 출처
 ```
 
@@ -60,7 +58,7 @@
 ## 용어와 약어
 
 - 약어는 처음 중요한 위치에서 `약어(전체 단어)`로 씁니다.
-- 어려운 약어는 본문에 긴 설명을 넣지 말고 문서 하단 `약어 각주`에 설명합니다.
+- 어려운 약어는 본문에 긴 설명을 넣지 말고 문서 맨 아래 꼬리말에 설명합니다.
 - `AI`, `API`, `PC`, `USD`처럼 문맥상 익숙한 약어는 필요할 때만 각주를 답니다.
 - 서비스명과 공식 메뉴명은 가능한 한 실제 화면에 가까운 이름을 씁니다.
 
@@ -77,8 +75,6 @@ DLP(Data Loss Prevention) <sup class="wiki-footnote-ref"><a class="wiki-footnote
 하단 예시:
 
 ```md
-## 약어 각주
-
 <div class="wiki-footnotes">
 <p class="wiki-footnote" id="abbr-note-1"><a class="wiki-footnote-link" href="#abbr-ref-1">[1]</a> DLP(Data Loss Prevention): 민감정보가 외부로 나가지 않도록 탐지하거나 차단하는 보안 기능이다.</p>
 </div>
@@ -92,7 +88,8 @@ DLP(Data Loss Prevention) <sup class="wiki-footnote-ref"><a class="wiki-footnote
 - 각주는 본문에 처음 등장하는 순서대로 붙입니다.
 - 같은 약어가 여러 번 나오면 보통 첫 번째 의미 있는 위치에만 각주를 답니다.
 - 하단 설명은 표로 만들지 않고 `[번호] 설명` 형태로 씁니다. `[번호]` 뒤에 하이픈은 넣지 않습니다.
-- `## 약어 각주`는 보통 `## 참고 출처` 바로 위에 둡니다.
+- `## 약어 각주` 같은 별도 제목은 만들지 않습니다.
+- 각주 블록은 목차에 잡히지 않는 꼬리말처럼 문서 맨 아래에 붙입니다.
 
 ## 링크
 

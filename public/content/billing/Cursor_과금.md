@@ -197,16 +197,6 @@ Cursor 가격 페이지는 self-serve는 카드 결제, 인보이스/wire는 Ent
 
 가능할 수는 있지만 운영 통제가 약해진다. 교육 종료 후 회수, Privacy Mode 강제, 사용량 관리가 어렵다.
 
-## 약어 각주
-
-<div class="wiki-footnotes">
-<p class="wiki-footnote" id="abbr-note-1"><a class="wiki-footnote-link" href="#abbr-ref-1">[1]</a> SAML(Security Assertion Markup Language): 조직 계정과 외부 서비스를 연결할 때 쓰는 인증 연동 표준이다.</p>
-<p class="wiki-footnote" id="abbr-note-2"><a class="wiki-footnote-link" href="#abbr-ref-2">[2]</a> OIDC(OpenID Connect): OAuth 2.0 기반의 사용자 인증 연동 표준이다.</p>
-<p class="wiki-footnote" id="abbr-note-3"><a class="wiki-footnote-link" href="#abbr-ref-3">[3]</a> SSO(Single Sign-On): 조직 계정 하나로 여러 서비스에 로그인하게 하는 인증 방식이다.</p>
-<p class="wiki-footnote" id="abbr-note-4"><a class="wiki-footnote-link" href="#abbr-ref-4">[4]</a> PO(Purchase Order): 구매 주문서다. 기업 구매 절차에서 인보이스 결제와 함께 등장한다.</p>
-<p class="wiki-footnote" id="abbr-note-5"><a class="wiki-footnote-link" href="#abbr-ref-5">[5]</a> SCIM(System for Cross-domain Identity Management): 사용자 생성, 수정, 삭제를 자동화하는 계정 관리 표준이다.</p>
-</div>
-
 ## 출처
 
 - Cursor Pricing: https://cursor.com/pricing
@@ -216,3 +206,11 @@ Cursor 가격 페이지는 self-serve는 카드 결제, 인보이스/wire는 Ent
 - Cursor Team Pricing: https://docs.cursor.com/en/account/teams/pricing
 - Cursor Enterprise: https://cursor.com/enterprise
 - Cursor Security: https://cursor.com/security
+
+<div class="wiki-footnotes">
+<p class="wiki-footnote" id="abbr-note-1"><a class="wiki-footnote-link" href="#abbr-ref-1">[1]</a> SAML(Security Assertion Markup Language): 조직 계정과 외부 서비스를 연결할 때 쓰는 인증 연동 표준이다.</p>
+<p class="wiki-footnote" id="abbr-note-2"><a class="wiki-footnote-link" href="#abbr-ref-2">[2]</a> OIDC(OpenID Connect): OAuth 2.0 기반의 사용자 인증 연동 표준이다.</p>
+<p class="wiki-footnote" id="abbr-note-3"><a class="wiki-footnote-link" href="#abbr-ref-3">[3]</a> SSO(Single Sign-On): 조직 계정 하나로 여러 서비스에 로그인하게 하는 인증 방식이다.</p>
+<p class="wiki-footnote" id="abbr-note-4"><a class="wiki-footnote-link" href="#abbr-ref-4">[4]</a> PO(Purchase Order): 구매 주문서다. 기업 구매 절차에서 인보이스 결제와 함께 등장한다.</p>
+<p class="wiki-footnote" id="abbr-note-5"><a class="wiki-footnote-link" href="#abbr-ref-5">[5]</a> SCIM(System for Cross-domain Identity Management): 사용자 생성, 수정, 삭제를 자동화하는 계정 관리 표준이다.</p>
+</div>

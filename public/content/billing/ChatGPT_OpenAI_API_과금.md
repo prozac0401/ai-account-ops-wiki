@@ -135,13 +135,6 @@ OpenAI
 
 항상 그렇지는 않다. 하지만 결제와 워크스페이스 관리 권한은 강력하므로 최소화해야 한다.
 
-## 약어 각주
-
-<div class="wiki-footnotes">
-<p class="wiki-footnote" id="abbr-note-1"><a class="wiki-footnote-link" href="#abbr-ref-1">[1]</a> ACH(Automated Clearing House): 미국 은행 계좌 기반 이체망이다. 카드 외 결제수단 예시로 등장할 수 있다.</p>
-<p class="wiki-footnote" id="abbr-note-2"><a class="wiki-footnote-link" href="#abbr-ref-2">[2]</a> PO(Purchase Order): 구매 주문서다. 기업 구매 절차에서 인보이스 결제와 함께 등장한다.</p>
-</div>
-
 ## 출처
 
 - ChatGPT Business billing and seats: https://help.openai.com/en/articles/8792536-managing-billing-and-seats-in-chatgpt-business
@@ -149,3 +142,8 @@ OpenAI
 - OpenAI API pricing: https://platform.openai.com/docs/pricing
 - OpenAI API 작업 단위: https://help.openai.com/ko-kr/articles/9186755-api-%ED%94%8C%EB%9E%AB%ED%8F%BC%EC%97%90%EC%84%9C-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EA%B4%80%EB%A6%AC%ED%95%98%EA%B8%B0
 - OpenAI API org members: https://help.openai.com/en/articles/4936812-how-do-i-add-change-or-remove-members-on-my-openai-api-account
+
+<div class="wiki-footnotes">
+<p class="wiki-footnote" id="abbr-note-1"><a class="wiki-footnote-link" href="#abbr-ref-1">[1]</a> ACH(Automated Clearing House): 미국 은행 계좌 기반 이체망이다. 카드 외 결제수단 예시로 등장할 수 있다.</p>
+<p class="wiki-footnote" id="abbr-note-2"><a class="wiki-footnote-link" href="#abbr-ref-2">[2]</a> PO(Purchase Order): 구매 주문서다. 기업 구매 절차에서 인보이스 결제와 함께 등장한다.</p>
+</div>
