@@ -54,7 +54,7 @@ ChatGPT Business에는 역할과 좌석이 있다.
 
 OpenAI 도움말 기준으로 ChatGPT Business는 표준 ChatGPT 좌석과 Codex 좌석을 구분한다.
 
-| 좌석 | 용도 | 과금 감각 |
+| 좌석 | 용도 | 과금 방식 |
 |---|---|---|
 | Standard ChatGPT seat | ChatGPT 워크스페이스 사용 | 사용자당 월 고정 |
 | Codex seat | Codex 중심 사용 | 사용량 기반 요소 |
