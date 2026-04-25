@@ -18,6 +18,7 @@ npm run dev
 - `src/styles.css`: 위키 화면 스타일
 - `index.html`: 앱 진입점
 - [Help.md](Help.md): GitHub에서만 보는 문서 반영·링크·배포 도움말
+- [STYLE_GUIDE.md](STYLE_GUIDE.md): 위키 문서 문체·구조·각주 작성 지침
 
 ## 기능
 
