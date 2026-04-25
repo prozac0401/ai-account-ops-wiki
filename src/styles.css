@@ -1056,6 +1056,23 @@ svg {
   font-size: 13px;
 }
 
+.heading-number {
+  display: inline-block;
+  min-width: 2.2em;
+  margin-right: 8px;
+  color: var(--teal-strong);
+  font-family: var(--mono);
+  font-size: 0.78em;
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+.article-body h3 .heading-number {
+  min-width: 2.8em;
+  color: var(--faint);
+  font-size: 0.76em;
+}
+
 .heading-anchor {
   display: inline-flex;
   margin-left: 8px;
@@ -1144,12 +1161,26 @@ svg {
 }
 
 .toc-link {
-  display: block;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  column-gap: 8px;
   padding: 7px 0 7px 10px;
   border-left: 2px solid transparent;
   color: var(--muted);
   font-size: 13px;
   line-height: 1.35;
+}
+
+.toc-number {
+  color: var(--teal-strong);
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+.toc-title {
+  min-width: 0;
 }
 
 .toc-link:hover,
@@ -1165,7 +1196,15 @@ svg {
   color: var(--faint);
 }
 
+.toc-link.depth-h3 .toc-number {
+  color: var(--faint);
+}
+
 .toc-link.depth-h3.is-active {
+  color: var(--teal-strong);
+}
+
+.toc-link.depth-h3.is-active .toc-number {
   color: var(--teal-strong);
 }
 

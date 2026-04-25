@@ -770,23 +770,50 @@ function enhanceArticle() {
   const tocTarget = document.querySelector("[data-toc]");
   const headings = [...article.querySelectorAll("h2, h3")];
   const used = new Set();
+  const outline = [];
+  let h2Count = 0;
+  let h3Count = 0;
 
   headings.forEach((heading) => {
-    const id = uniqueSlug(heading.textContent, used);
+    const title = stripManualHeadingNumber(heading.textContent.trim());
+    const level = heading.tagName.toLowerCase();
+    heading.textContent = title;
+
+    if (level === "h2") {
+      h2Count += 1;
+      h3Count = 0;
+    } else {
+      if (!h2Count) h2Count = 1;
+      h3Count += 1;
+    }
+
+    const number = level === "h2" ? `${h2Count}.` : `${h2Count}.${h3Count}.`;
+    const id = uniqueSlug(title, used);
     heading.id = id;
+
+    const numberLabel = document.createElement("span");
+    numberLabel.className = "heading-number";
+    numberLabel.textContent = number;
+    heading.prepend(numberLabel, document.createTextNode(" "));
+
     const anchor = document.createElement("a");
     anchor.href = `#${id}`;
     anchor.className = "heading-anchor";
-    anchor.setAttribute("aria-label", `${heading.textContent} 바로가기`);
+    anchor.setAttribute("aria-label", `${number} ${title} 바로가기`);
     anchor.innerHTML = '<i data-lucide="hash"></i>';
     heading.append(anchor);
+
+    outline.push({ id, level, number, title });
   });
 
-  tocTarget.innerHTML = headings.length
-    ? headings
+  tocTarget.innerHTML = outline.length
+    ? outline
         .map(
           (heading) => `
-            <a href="#${heading.id}" class="toc-link depth-${heading.tagName.toLowerCase()}" data-toc-link="${heading.id}">${heading.textContent}</a>
+            <a href="#${heading.id}" class="toc-link depth-${heading.level}" data-toc-link="${heading.id}">
+              <span class="toc-number">${escapeHtml(heading.number)}</span>
+              <span class="toc-title">${escapeHtml(heading.title)}</span>
+            </a>
           `,
         )
         .join("")
@@ -1088,6 +1115,10 @@ function uniqueSlug(text, used) {
   }
   used.add(slug);
   return slug;
+}
+
+function stripManualHeadingNumber(text) {
+  return text.replace(/^\d+(?:\.\d+)*\.\s+/, "");
 }
 
 function toggleTheme() {
