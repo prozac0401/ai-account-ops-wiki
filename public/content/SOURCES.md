@@ -71,6 +71,18 @@
 - Verify your payment information
   https://knowledge.workspace.google.com/admin/billing/verify-your-payment-information
 
+- 사용자의 보안 설정 관리하기
+  https://knowledge.workspace.google.com/admin/security/manage-a-users-security-settings?hl=ko
+
+- 보안 테스트로 Google Workspace 계정 보호하기
+  https://support.google.com/a/answer/6002699?hl=ko
+
+- 본인 소유가 아닌 기기에 로그인
+  https://support.google.com/accounts/answer/2917834?co=GENIE.Platform%3DDesktop&hl=ko
+
+- 해킹되거나 도용된 Google 계정 보호
+  https://support.google.com/accounts/answer/6294825?hl=ko
+
 ## Anthropic / Claude
 
 - How long do you store my organization's data?
