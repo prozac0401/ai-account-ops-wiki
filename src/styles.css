@@ -1149,7 +1149,8 @@ svg {
 }
 
 .toc-link:hover,
-.toc-link:focus-visible {
+.toc-link:focus-visible,
+.toc-link.is-active {
   border-left-color: var(--teal);
   color: var(--teal-strong);
   outline: 0;
@@ -1158,6 +1159,15 @@ svg {
 .toc-link.depth-h3 {
   padding-left: 22px;
   color: var(--faint);
+}
+
+.toc-link.depth-h3.is-active {
+  color: var(--teal-strong);
+}
+
+.toc-link.is-active {
+  background: color-mix(in srgb, var(--teal-soft) 72%, transparent);
+  font-weight: 800;
 }
 
 .toc-empty {

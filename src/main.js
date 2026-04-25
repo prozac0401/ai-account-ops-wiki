@@ -427,6 +427,7 @@ const state = {
   searchOpen: false,
   navOpen: false,
   theme: localStorage.getItem("wiki-theme") || "light",
+  scrollTicking: false,
 };
 
 if ("scrollRestoration" in history) {
@@ -470,7 +471,7 @@ async function loadRoute({ resetScroll = false } = {}) {
     }
   } finally {
     page.classList.remove("is-loading");
-    updateScrollTopButton();
+    updateScrollUi();
   }
 }
 
@@ -785,11 +786,13 @@ function enhanceArticle() {
     ? headings
         .map(
           (heading) => `
-            <a href="#${heading.id}" class="toc-link depth-${heading.tagName.toLowerCase()}">${heading.textContent}</a>
+            <a href="#${heading.id}" class="toc-link depth-${heading.tagName.toLowerCase()}" data-toc-link="${heading.id}">${heading.textContent}</a>
           `,
         )
         .join("")
     : '<p class="toc-empty">목차가 없습니다.</p>';
+
+  updateTocActive();
 
   article.querySelectorAll("table").forEach((table) => {
     const wrap = document.createElement("div");
@@ -815,10 +818,17 @@ function bindGlobalEvents() {
     }
   });
 
-  window.addEventListener("scroll", updateScrollTopButton, { passive: true });
-  window.addEventListener("resize", updateScrollTopButton);
+  window.addEventListener("scroll", scheduleScrollUiUpdate, { passive: true });
+  window.addEventListener("resize", scheduleScrollUiUpdate);
 
   document.addEventListener("click", (event) => {
+    const tocLink = event.target.closest("[data-toc-link]");
+    if (tocLink) {
+      event.preventDefault();
+      scrollToHeading(tocLink.dataset.tocLink);
+      return;
+    }
+
     const routeLink = event.target.closest("[data-route]");
     if (routeLink) {
       const id = routeLink.dataset.route;
@@ -994,12 +1004,58 @@ function scrollToPageTop({ smooth = false } = {}) {
     behavior: smooth ? "smooth" : "auto",
   });
   updateScrollTopButton();
+  updateTocActive();
 }
 
 function updateScrollTopButton() {
   const button = document.querySelector("[data-scroll-top]");
   if (!button) return;
   button.classList.toggle("is-visible", window.scrollY > 360);
+}
+
+function scheduleScrollUiUpdate() {
+  if (state.scrollTicking) return;
+  state.scrollTicking = true;
+  window.requestAnimationFrame(() => {
+    updateScrollUi();
+    state.scrollTicking = false;
+  });
+}
+
+function updateScrollUi() {
+  updateScrollTopButton();
+  updateTocActive();
+}
+
+function updateTocActive() {
+  const links = [...document.querySelectorAll("[data-toc-link]")];
+  if (!links.length) return;
+
+  const headings = links
+    .map((link) => document.getElementById(link.dataset.tocLink))
+    .filter(Boolean);
+  if (!headings.length) return;
+
+  const readingLine = window.scrollY + 118;
+  const activeHeading =
+    [...headings].reverse().find((heading) => heading.offsetTop <= readingLine) || headings[0];
+
+  links.forEach((link) => {
+    const isActive = link.dataset.tocLink === activeHeading.id;
+    link.classList.toggle("is-active", isActive);
+    if (isActive) {
+      link.setAttribute("aria-current", "location");
+    } else {
+      link.removeAttribute("aria-current");
+    }
+  });
+}
+
+function scrollToHeading(id) {
+  const heading = document.getElementById(id);
+  if (!heading) return;
+  const top = window.scrollY + heading.getBoundingClientRect().top - 92;
+  window.scrollTo({ top: Math.max(0, top), behavior: "smooth" });
 }
 
 function route(id) {
