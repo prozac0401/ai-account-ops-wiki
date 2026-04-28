@@ -1,0 +1,169 @@
+# 현장 실제 Q&A
+
+> 상위 문서: [[../Home|AI 계정 운영]]
+> 분류: 실제 질의응답 / 운영 사례
+
+[목차]
+
+## 개요
+
+이 문서는 이번 운영에서 실제로 나온 질문을 운영 문서 형태로 정리한 것이다.
+
+공식 매뉴얼에는 잘 나오지 않는 “실제로 하다 보니 막힌 부분”을 남기는 데 목적이 있다.
+
+## Q1. 수강생 Gmail 계정을 ChatGPT와 Cursor에 등록해도 되나?
+
+가능할 수 있다. 다만 조직 계정이 아니므로 통제가 약해진다.
+
+운영 포인트는 다음과 같다.
+
+- Google Form으로 수집할 때 개인정보 고지를 한다.
+- 개인 Gmail 주소를 외부 AI SaaS에 등록한다는 점을 고지한다.
+- 수강생에게 2단계 인증을 권장한다.
+- 교육 종료 후 서비스 멤버를 제거한다.
+- 계정 자체 삭제는 사용자가 직접 해야 할 수 있음을 안내한다.
+
+## Q2. Cursor도 ChatGPT처럼 개인정보 고지와 동의가 필요한가?
+
+필요하다고 보는 편이 안전하다.
+
+Cursor는 코드와 프롬프트를 처리한다. Privacy Mode가 있더라도 AI 요청 처리를 위해 해외 서버와 모델 제공자로 전송될 수 있다. 따라서 개인정보 수집·이용, 국외 이전, 입력 금지 데이터 안내를 함께 검토한다.
+
+## Q3. 동의서와 고지서를 하나로 만들까, 둘로 만들까?
+
+운영 편의상 둘로 나누는 방식이 깔끔하다.
+
+- 고지서: 수강생이 알아야 할 내용을 설명한다.
+- 동의서: 동의 여부를 기록한다.
+
+전자서명이나 Google Form에서는 고지 내용을 보여 주고, 동의 체크박스를 별도로 두는 방식을 쓴다.
+
+## Q4. 개인정보보호법 제15조, 제17조, 제18조, 제28조의8은 왜 나왔나?
+
+AI 교육 계정 운영과 연결되는 지점이 있다.
+
+| 조문 | 쉬운 설명 | 이번 운영에서의 의미 |
+|---|---|---|
+| 제15조 | 개인정보 수집·이용 | 이메일, 이름을 받는 근거와 고지 항목 |
+| 제17조 | 제3자 제공 | 외부 SaaS(Software as a Service) <sup class="wiki-footnote-ref"><a class="wiki-footnote-link" id="abbr-ref-4" href="#abbr-note-4">[4]</a></sup> 제공자에게 정보가 넘어가는 구조 검토 |
+| 제18조 | 목적 외 이용·제공 제한 | 교육 목적으로 받은 정보를 다른 용도로 쓰지 않기 |
+| 제28조의8 | 개인정보 국외 이전 | OpenAI, Cursor, Anthropic, Google 등 해외 처리 검토 |
+
+## Q5. OpenAI와 Claude가 제28조의8 수준을 충족할 수 있나?
+
+“가능성이 있다”와 “자동으로 충족된다”는 다르다.
+
+운영 실무에서는 다음을 준비한다.
+
+- 내부 고지와 동의
+- DPA(Data Processing Addendum) <sup class="wiki-footnote-ref"><a class="wiki-footnote-link" id="abbr-ref-1" href="#abbr-note-1">[1]</a></sup> 또는 약관 문서
+- SCC(Standard Contractual Clauses) <sup class="wiki-footnote-ref"><a class="wiki-footnote-link" id="abbr-ref-2" href="#abbr-note-2">[2]</a></sup> 등 국외 이전 보호 조치 설명
+- 보안 인증 또는 Trust Center 자료
+- 데이터 리텐션 정책
+- 관리자 설정 화면 캡처
+
+법무 검토 없이 “충족합니다”라고 단정하지 않는다.
+
+## Q6. ChatGPT Business에서 수강생을 제거하면 이메일도 삭제되나?
+
+멤버 제거와 계정 삭제는 다르다.
+
+수강생이 개인 OpenAI 계정을 사용했다면, 워크스페이스에서 제거해도 개인 계정 자체가 사라지는 것은 아니다. 이메일 주소 삭제나 계정 삭제는 OpenAI 계정 삭제 정책과 사용자의 직접 조치가 필요할 수 있다.
+
+## Q7. ChatGPT Business에서 협업 기록을 강제로 삭제할 수 있나?
+
+서비스 정책과 플랜에 따라 다르다.
+
+운영 문서에는 이렇게 적는다.
+
+- 멤버 제거는 접근 회수다.
+- 개별 대화 삭제는 사용자가 직접 해야 할 수 있다.
+- 워크스페이스 단위 삭제나 보존 정책은 플랜과 지원 절차를 확인해야 한다.
+- “교육 종료 후 모든 데이터가 즉시 완전 삭제된다”고 안내하지 않는다.
+
+## Q8. Cursor의 리텐션 정책은 어디에 있나?
+
+Cursor Security 페이지에 Privacy Mode Guarantee와 Account Deletion 섹션이 있다.
+
+운영 문서에는 다음 위치를 기록한다.
+
+- Security → Privacy Mode Guarantee
+- Security → Account Deletion
+- Privacy Policy → Retention
+
+특히 Account Deletion에는 계정 관련 데이터와 indexed codebases를 포함해 30일 내 완전 제거를 보장한다는 설명이 있다.
+
+## Q9. Colab Pro를 처음에는 2개밖에 못 산 것처럼 보였다. 이게 공식 규칙인가?
+
+공식 규칙으로 단정하지 않는다.
+
+공식 Colab 설정 문서에는 필요한 수만큼 라이선스를 구매할 수 있다는 취지의 설명이 있다. 따라서 운영 문서에는 “결제 계정 상태 또는 신규 구독 제한으로 보인 실제 사례”로 기록한다.
+
+## Q10. Colab Pro는 왜 연간계약만 가능했나?
+
+공식 문서에는 온라인 직접 구매 시 Annual/Fixed-Term Plan을 선택해야 한다고 안내되어 있다. Flexible Plan이 필요하면 Google 영업 담당자 또는 Cloud 파트너 경로를 확인한다.
+
+## Q11. 수량을 늘리려면 월 구독액 절반을 선결제하라고 나온 이유는?
+
+공개 문서에서 같은 설명을 확인한 것은 아니다. Google Workspace 지원 담당자에게 문의한 뒤, 신규 결제 계정의 수량 확대와 관련된 내부 정책성 안내로 파악한 내용이다.
+
+당시 안내는 수량을 늘리려면 목표 총 사용자 수에 해당하는 월 구독액의 50% 수준을 수동 결제해야 할 수 있고, 이 금액은 향후 청구에 적용되는 크레딧으로 남는다는 취지였다.
+
+따라서 이 사례는 Google Workspace 신규 결제 계정의 수량 제한 또는 결제 신용 확인 흐름과 연결해 기록한다. 다만 어디에도 공개 설명이 있던 내용은 아니었으므로, Colab 자체의 보편 규칙이라고 단정하기 어렵다.
+
+## Q12. 보안이 비교적 자유로운 교육장인데도 보안팀 문의가 필요한가?
+
+필요하다.
+
+다만 대규모 심사보다 최소 확인 포인트를 보내는 방식이 현실적이다.
+
+- Gmail 계정 초대 방식
+- 금지 데이터 안내
+- DPA(Data Processing Addendum)/ToS(Terms of Service) <sup class="wiki-footnote-ref"><a class="wiki-footnote-link" id="abbr-ref-3" href="#abbr-note-3">[3]</a></sup> 확인
+- 사고 대응 라인
+- 교육 종료 후 회수 절차
+
+## Q13. OpenAI API 키를 수강생에게 직접 줘도 되나?
+
+가능은 하지만 위험하다.
+
+권장 방식은 교육용 API 작업 단위를 만들고, 예산을 걸고, 서버 쪽에서 키를 보관하는 것이다. 직접 키 발급이 필요하면 교육 종료 후 삭제와 GitHub 노출 방지를 반드시 안내한다.
+
+## Q14. 수강생이 동의하지 않으면 어떻게 하나?
+
+AI 서비스 계정은 발급하지 않는다.
+
+동의 거부권은 안내하되, 동의하지 않으면 해당 AI 기능을 이용할 수 없다는 불이익을 명확히 적는다. 대체 과제 제공 여부는 교육 과정별로 정한다.
+
+## Q15. 공식 문서에 없는 실제 사례는 어떻게 문서화하나?
+
+다음 형식으로 적는다.
+
+```text
+[현장 실제 사례]
+- 발생 상황:
+- 당시 화면/문구:
+- 추정 원인:
+- 공식 문서와 일치하는 부분:
+- 공식 문서로 확인되지 않은 부분:
+- 다음 운영 시 조치:
+```
+
+이렇게 해야 나중에 실제 사례가 공식 규칙처럼 굳어지는 일을 막을 수 있다.
+
+## Q16. Cursor에서 기존 Unpaid Admin이 Admin으로 보이면 과금인가?
+
+무조건 과금으로 보지 않는다.
+
+지난 주말(2026-04-25~2026-04-26) Cursor 팀 대시보드에서 기존 `Unpaid Admin` 계정이 `Admin` 으로 표시되고, 역할 드롭다운에서 `Unpaid Admin` 선택지가 사라지는 현상이 있었다. 2026-04-28 현재 표기와 선택지가 복구된 것을 확인했다.
+
+이번 사례에서는 Cursor Support가 display bug로 설명했고, 기존 `Unpaid Admin` 은 내부적으로 unpaid 상태가 유지된다는 취지로 확인했다. 다만 새로 `Admin` 으로 바꾸거나 추가한 계정은 billable seat으로 잡힐 수 있으므로 구분해서 봐야 한다.
+
+같은 현상이 보이면 역할을 직접 바꾸지 말고, Billing seat count와 upcoming invoice를 먼저 확인한 뒤 [[issues/Cursor_Unpaid_Admin_표시_오류_대응|Cursor Unpaid Admin 표시 오류 대응]] 절차를 따른다.
+
+<div class="wiki-footnotes">
+<p class="wiki-footnote" id="abbr-note-1"><a class="wiki-footnote-link" href="#abbr-ref-1">[1]</a> DPA(Data Processing Addendum): 개인정보 처리와 보호 조치를 정리한 계약 부속 문서다.</p>
+<p class="wiki-footnote" id="abbr-note-2"><a class="wiki-footnote-link" href="#abbr-ref-2">[2]</a> SCC(Standard Contractual Clauses): 국외 이전 등에서 쓰이는 표준계약조항이다.</p>
+<p class="wiki-footnote" id="abbr-note-3"><a class="wiki-footnote-link" href="#abbr-ref-3">[3]</a> ToS(Terms of Service): 서비스 이용약관을 뜻한다.</p>
+<p class="wiki-footnote" id="abbr-note-4"><a class="wiki-footnote-link" href="#abbr-ref-4">[4]</a> SaaS(Software as a Service): 설치형 소프트웨어가 아니라 웹 서비스 형태로 구독해 쓰는 소프트웨어다.</p>
+</div>
