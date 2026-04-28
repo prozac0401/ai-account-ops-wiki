@@ -57,6 +57,26 @@ OpenAI API Platform에서 사용량, 키, 멤버, 예산을 나누는 단위.
 
 AI 코드 편집기. 코드 자동완성, 설명, 수정, 디버깅을 돕는다.
 
+## Unpaid Admin
+
+Cursor 팀에서 비과금 관리자를 뜻한다. 팀원 관리, 결제 관리, SSO(Single Sign-On) 설정 등을 할 수 있지만 Cursor 사용 좌석은 차지하지 않는 관리자 역할이다.
+
+## Billable Seat
+
+과금 대상 좌석. Cursor를 실제로 사용할 수 있는 사용자로 계산되어 요금이 부과될 수 있는 좌석을 뜻한다.
+
+## Display Bug
+
+표시 오류. 내부 권한이나 과금 상태는 그대로인데 화면에 잘못된 이름이나 상태로 보이는 문제를 뜻한다.
+
+## Role Dropdown
+
+사용자 역할을 바꾸는 역할 선택 메뉴. Cursor 팀 대시보드에서는 `Member`, `Admin`, `Unpaid Admin` 같은 역할을 선택하는 메뉴를 뜻한다.
+
+## Upcoming Invoice
+
+다음 청구 예정 내역. 실제 과금 변경 여부를 확인할 때 Billing seat count와 함께 확인한다.
+
 ## Privacy Mode
 
 Cursor에서 코드 데이터의 저장과 학습 사용을 제한하는 설정. 전송 자체가 없다는 뜻은 아니다.

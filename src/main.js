@@ -170,6 +170,13 @@ const docs = [
     summary: "Cursor 팀 플랜의 결제, 좌석, 비용 회수 관점을 다룹니다.",
   },
   {
+    id: "billing/Cursor_Unpaid_Admin_표시_오류_대응",
+    title: "Cursor Unpaid Admin 표시 오류 대응",
+    file: "billing/Cursor_Unpaid_Admin_표시_오류_대응.md",
+    group: "과금",
+    summary: "Cursor 대시보드에서 Unpaid Admin이 Admin으로 보일 때 과금 여부와 복구 확인 절차를 정리합니다.",
+  },
+  {
     id: "billing/해외_결제_차단_대응",
     title: "해외 결제 차단 대응",
     file: "billing/해외_결제_차단_대응.md",
@@ -287,6 +294,7 @@ const sections = [
       "billing/Google_Workspace_Colab_과금",
       "billing/ChatGPT_OpenAI_API_과금",
       "billing/Cursor_과금",
+      "billing/Cursor_Unpaid_Admin_표시_오류_대응",
       "billing/해외_결제_차단_대응",
       "billing/실제_비용과_True_up",
     ],

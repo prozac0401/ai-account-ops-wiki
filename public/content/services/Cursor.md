@@ -46,6 +46,8 @@ Unpaid Admin 전환 전 확인할 것:
 
 강의장에 다른 사람이 로그인된 Cursor 계정에 접근할 수 있는 상태라면 Unpaid Admin 전환을 비용 절감 수단으로 쓰지 않는다.
 
+운영상 주의할 사례가 하나 있다. 지난 주말(2026-04-25~2026-04-26) 기존 `Unpaid Admin` 이 `Admin` 으로 표시되고 역할 드롭다운에서 `Unpaid Admin` 선택지가 보이지 않는 표시 오류가 있었고, 2026-04-28 복구를 확인했다. 같은 현상이 다시 보이면 역할을 임의로 바꾸지 말고 Billing seat count와 upcoming invoice를 먼저 확인한 뒤 [[billing/Cursor_Unpaid_Admin_표시_오류_대응|Cursor Unpaid Admin 표시 오류 대응]] 절차를 따른다.
+
 ## Privacy Mode
 
 ### 핵심
