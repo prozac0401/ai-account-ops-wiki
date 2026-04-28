@@ -159,7 +159,7 @@ AI 서비스 계정은 발급하지 않는다.
 
 이번 사례에서는 Cursor Support가 display bug로 설명했고, 기존 `Unpaid Admin` 은 내부적으로 unpaid 상태가 유지된다는 취지로 확인했다. 다만 새로 `Admin` 으로 바꾸거나 추가한 계정은 billable seat으로 잡힐 수 있으므로 구분해서 봐야 한다.
 
-같은 현상이 보이면 역할을 직접 바꾸지 말고, Billing seat count와 upcoming invoice를 먼저 확인한 뒤 [[billing/Cursor_Unpaid_Admin_표시_오류_대응|Cursor Unpaid Admin 표시 오류 대응]] 절차를 따른다.
+같은 현상이 보이면 역할을 직접 바꾸지 말고, Billing seat count와 upcoming invoice를 먼저 확인한 뒤 [[issues/Cursor_Unpaid_Admin_표시_오류_대응|Cursor Unpaid Admin 표시 오류 대응]] 절차를 따른다.
 
 <div class="wiki-footnotes">
 <p class="wiki-footnote" id="abbr-note-1"><a class="wiki-footnote-link" href="#abbr-ref-1">[1]</a> DPA(Data Processing Addendum): 개인정보 처리와 보호 조치를 정리한 계약 부속 문서다.</p>

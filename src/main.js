@@ -170,13 +170,6 @@ const docs = [
     summary: "Cursor 팀 플랜의 결제, 좌석, 비용 회수 관점을 다룹니다.",
   },
   {
-    id: "billing/Cursor_Unpaid_Admin_표시_오류_대응",
-    title: "Cursor Unpaid Admin 표시 오류 대응",
-    file: "billing/Cursor_Unpaid_Admin_표시_오류_대응.md",
-    group: "과금",
-    summary: "Cursor 대시보드에서 Unpaid Admin이 Admin으로 보일 때 과금 여부와 복구 확인 절차를 정리합니다.",
-  },
-  {
     id: "billing/해외_결제_차단_대응",
     title: "해외 결제 차단 대응",
     file: "billing/해외_결제_차단_대응.md",
@@ -189,6 +182,13 @@ const docs = [
     file: "billing/실제_비용과_True_up.md",
     group: "과금",
     summary: "서비스별 실제 단가, 사용자 추가·제거 과금, True-up 예시와 그래프를 정리합니다.",
+  },
+  {
+    id: "issues/Cursor_Unpaid_Admin_표시_오류_대응",
+    title: "Cursor Unpaid Admin 표시 오류 대응",
+    file: "issues/Cursor_Unpaid_Admin_표시_오류_대응.md",
+    group: "이슈 대응",
+    summary: "Cursor 대시보드에서 Unpaid Admin이 Admin으로 보일 때 과금 여부와 복구 확인 절차를 정리합니다.",
   },
   {
     id: "compliance/개인정보_고지_동의",
@@ -294,10 +294,14 @@ const sections = [
       "billing/Google_Workspace_Colab_과금",
       "billing/ChatGPT_OpenAI_API_과금",
       "billing/Cursor_과금",
-      "billing/Cursor_Unpaid_Admin_표시_오류_대응",
       "billing/해외_결제_차단_대응",
       "billing/실제_비용과_True_up",
     ],
+  },
+  {
+    label: "이슈 대응",
+    icon: "triangle-alert",
+    docIds: ["issues/Cursor_Unpaid_Admin_표시_오류_대응"],
   },
   {
     label: "컴플라이언스",

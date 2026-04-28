@@ -18,9 +18,10 @@ AI 계정 운영
 │  ├─ Google Workspace·Colab 과금
 │  ├─ ChatGPT·OpenAI API 과금
 │  ├─ Cursor 과금
-│  ├─ Cursor Unpaid Admin 표시 오류 대응
 │  ├─ 해외 결제 차단 대응
 │  └─ 실제 비용과 True-up
+├─ 이슈 대응
+│  └─ Cursor Unpaid Admin 표시 오류 대응
 ├─ 컴플라이언스
 │  ├─ 개인정보 고지와 동의
 │  ├─ 정보보안 검토

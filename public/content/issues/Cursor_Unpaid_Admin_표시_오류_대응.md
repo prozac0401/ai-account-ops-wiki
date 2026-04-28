@@ -1,7 +1,7 @@
 # Cursor Unpaid Admin 표시 오류 대응
 
-> 상위 문서: [[billing/Cursor_과금|Cursor 과금]]
-> 분류: Cursor / 과금 / Unpaid Admin / 표시 오류
+> 상위 문서: [[services/Cursor|Cursor]] / [[compliance/사고_대응|사고 대응]]
+> 분류: Cursor / 이슈 대응 / Unpaid Admin / 표시 오류
 
 [목차]
 

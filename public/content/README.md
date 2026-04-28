@@ -8,6 +8,7 @@
 - `_Sidebar.md`: GitHub Wiki용 사이드바
 - `services/`: 서비스별 운영 문서
 - `billing/`: 결제·청구·좌석 문서
+- `issues/`: 서비스별 장애·이슈 대응 기록과 절차
 - `compliance/`: 개인정보·보안·삭제·사고 대응 문서
 - `education/`: 교육 담당자와 수강생 문서
 - `templates/`: 바로 고쳐 쓸 수 있는 안내문·동의서
