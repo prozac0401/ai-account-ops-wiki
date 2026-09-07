@@ -1,7 +1,8 @@
 # Cursor
 
-> 상위 문서: [[../Home|AI 계정 운영]]
+> 상위 문서: [[Home|AI 계정 운영]]
 > 분류: Cursor / AI 코드 편집기 / Privacy Mode
+> 계정·보안 정책 공식 재확인: 2026-09-07 / 실제 팀 설정·계약은 별도 확인
 
 [목차]
 
@@ -24,7 +25,7 @@ Cursor는 AI 기능이 들어간 코드 편집기다.
 
 ## 플랜 구조
 
-Cursor 가격 페이지 기준으로 Teams 플랜은 사용자당 월 구독 형태이며, 공유 chats/commands/rules, 중앙 팀 결제, 사용량 분석, 조직 단위 Privacy Mode 제어, RBAC(Role-Based Access Control) <sup class="wiki-footnote-ref"><a class="wiki-footnote-link" id="abbr-ref-1" href="#abbr-note-1">[1]</a></sup>, SAML(Security Assertion Markup Language) <sup class="wiki-footnote-ref"><a class="wiki-footnote-link" id="abbr-ref-2" href="#abbr-note-2">[2]</a></sup>/OIDC(OpenID Connect) <sup class="wiki-footnote-ref"><a class="wiki-footnote-link" id="abbr-ref-3" href="#abbr-note-3">[3]</a></sup> 기반 SSO(Single Sign-On) <sup class="wiki-footnote-ref"><a class="wiki-footnote-link" id="abbr-ref-4" href="#abbr-note-4">[4]</a></sup> 등을 포함한다. 2026-04-25 기준 공식 가격 페이지에서 개인 Pro는 `$20/month`, Teams는 `$40/user/month`로 구분된다. 포함 사용량 이후에는 on-demand usage가 후불 청구될 수 있다.
+Cursor Teams는 사용자별 Standard·Premium 구독과 사용량을 구분한다. 공유 chats/commands/rules, 중앙 팀 결제, 사용량 분석, 조직 단위 Privacy Mode 제어, RBAC(Role-Based Access Control) <sup class="wiki-footnote-ref"><a class="wiki-footnote-link" id="abbr-ref-1" href="#abbr-note-1">[1]</a></sup>, SAML(Security Assertion Markup Language) <sup class="wiki-footnote-ref"><a class="wiki-footnote-link" id="abbr-ref-2" href="#abbr-note-2">[2]</a></sup>/OIDC(OpenID Connect) <sup class="wiki-footnote-ref"><a class="wiki-footnote-link" id="abbr-ref-3" href="#abbr-note-3">[3]</a></sup> 기반 SSO(Single Sign-On) <sup class="wiki-footnote-ref"><a class="wiki-footnote-link" id="abbr-ref-4" href="#abbr-note-4">[4]</a></sup> 등을 제공한다. 현재 가격과 신규·기존 계약 적용 시점은 [[billing/Cursor_과금|Cursor 과금]]에서 확인한다. 과거 개인 Pro 가격을 Teams 좌석 가격으로 사용하지 않는다.
 
 Team에서 On-demand usage를 허용하면 설정과 월 한도는 팀 전체 단위로 관리한다. 수강생별로 on-demand 한도를 다르게 주는 방식으로 운영하기 어렵기 때문에, 교육 운영자는 팀 전체 한도를 낮게 두고 사용량 대시보드로 많이 쓰는 사용자를 따로 확인한다.
 
@@ -32,7 +33,7 @@ Enterprise는 여기에 pooled usage, invoice/PO(Purchase Order) <sup class="wik
 
 ## 역할과 Unpaid Admin
 
-Cursor Teams의 역할은 Member, Admin, Unpaid Admin으로 구분한다. Member와 Admin은 Cursor Pro 기능을 쓰는 paid seat로 보고, Unpaid Admin은 Pro 기능 없이 팀 관리만 하는 역할로 본다.
+Cursor Teams의 **역할**은 Member, Admin, Unpaid Admin이고, **좌석 유형**은 Standard, Premium, Free다. 역할과 좌석을 별도 열로 기록한다. Member와 Admin은 Standard 또는 Premium 유료 좌석을 쓰고, Unpaid Admin은 Cursor 사용 권한 없이 관리만 하는 Free 좌석이다. 과거 문서의 "Pro 기능"은 현재 Teams 좌석 이름이 아니다. 공식 확인일은 2026-09-07이다. [Teams 가격·좌석(P02)](https://cursor.com/docs/account/teams/pricing)
 
 교육 운영에서는 수업 중에는 운영자에게 Admin이 필요할 수 있다. 하지만 과정 종료 후에는 계속 관리만 필요한 운영자 계정을 Unpaid Admin으로 바꿔 paid seat 수를 줄일 수 있다. 이때도 Unpaid Admin은 Billing, 멤버, 사용량 설정 같은 관리 권한을 갖기 때문에 보안 계정으로 취급한다.
 
@@ -46,7 +47,21 @@ Unpaid Admin 전환 전 확인할 것:
 
 강의장에 다른 사람이 로그인된 Cursor 계정에 접근할 수 있는 상태라면 Unpaid Admin 전환을 비용 절감 수단으로 쓰지 않는다.
 
-운영상 주의할 사례가 하나 있다. 지난 주말(2026-04-25~2026-04-26) 기존 `Unpaid Admin` 이 `Admin` 으로 표시되고 역할 드롭다운에서 `Unpaid Admin` 선택지가 보이지 않는 표시 오류가 있었고, 2026-04-28 복구를 확인했다. 같은 현상이 다시 보이면 역할을 임의로 바꾸지 말고 Billing seat count와 upcoming invoice를 먼저 확인한 뒤 [[issues/Cursor_Unpaid_Admin_표시_오류_대응|Cursor Unpaid Admin 표시 오류 대응]] 절차를 따른다.
+2026-04-25~2026-04-26에는 기존 `Unpaid Admin`이 `Admin`으로 표시되고 역할 드롭다운에서 `Unpaid Admin` 선택지가 보이지 않는 오류가 있었고, 2026-04-28 복구를 확인했다. 같은 현상이 다시 보이면 역할을 임의로 바꾸지 말고 Billing seat count와 upcoming invoice를 먼저 확인한다. 이 기록은 과금 규정이 아니라 [[issues/Cursor_Unpaid_Admin_표시_오류_대응|4월 표시 오류 사건]]에 보존한다. [[issues/Cursor_청구_크레딧_분쟁|6–7월 청구·접근 분쟁]]은 별도 사건이며 최종 정산과 복구는 확인되지 않았다.
+
+## 사용량 통제
+
+### 초대와 좌석 변경
+
+Member도 멤버를 초대할 수 있다. 이메일 초대 외에 초대 링크·도메인 자동 가입을 사용한다면 종료 때 잔여 초대와 가입 경로도 점검한다. 비SCIM 팀에서는 검증된 도메인 자동 가입과 검증 도메인으로만 초대하는 제한을 별도로 설정한다. 링크 소지만으로 가입 가능한 초대는 공개 배포하지 않는다. [멤버 관리(P31)](https://cursor.com/docs/account/teams/members)
+
+Standard에서 Premium으로 올리면 즉시 적용되고 남은 주기가 일할 정산된다. Premium에서 Standard로 내리면 현재 주기까지 Premium이 유지되고 다음 갱신에 바뀐다. 팀에는 관리 역할과 유료 사용자가 각각 최소 1명 필요하다. 제거·역할 변경 뒤에는 실제 접근과 다음 청구를 따로 확인한다. [좌석 변경(P31)](https://cursor.com/docs/account/teams/members)
+
+### 예산 확인
+
+현재 Teams의 두 사용량 풀, Router, on-demand와 변경 권한은 [[billing/Cursor_과금|Cursor 과금]]을 기준으로 확인한다. Cost 선택이나 Hard Auto만으로 비용이 0이 되지는 않는다. Max Mode 설명은 legacy request-based 플랜 적용 범위와 함께 읽는다.
+
+현장 설정은 조직 채택 전 운영 제안이다. 교육 전 계정 관리자가 변경 전후 화면과 저장 후 재조회 결과를 기록하고, 결제 담당자가 팀 예산을 승인한다. 수업 중 한도 변경은 승인자와 만료 시점을 남긴다.
 
 ## Privacy Mode
 
@@ -54,7 +69,7 @@ Unpaid Admin 전환 전 확인할 것:
 
 Cursor의 Privacy Mode는 운영상 매우 중요하다.
 
-Cursor 보안 문서에 따르면 Privacy Mode가 켜진 경우 모델 제공자가 코드 데이터를 저장하거나 학습에 사용하지 않는다고 보증한다. 또한 팀 멤버는 기본적으로 Privacy Mode가 강제로 켜진다고 설명한다.
+Privacy Mode를 켜면 코드가 학습에 사용되지 않도록 보호한다. Enterprise는 기본 ON이며, Teams·Enterprise 관리자는 조직 전체에 강제해 멤버가 끄지 못하게 할 수 있다. 새 팀원은 팀 설정을 상속하므로 모든 Teams가 자동으로 강제 ON이라고 가정하지 않는다. [Privacy 설정(P32)](https://cursor.com/help/security-and-privacy/privacy), [팀 설정 상속(P33)](https://cursor.com/security)
 
 ### 그래도 국외 이전 이슈는 남는다
 
@@ -68,17 +83,19 @@ AI 기능을 쓰려면 요청이 Cursor 서버와 모델 제공자 쪽으로 전
 
 ### Privacy Mode일 때
 
-- 코드 데이터가 모델 제공자에 저장되지 않도록 하는 구조
-- 모델 제공자와 zero data retention 계약을 유지한다고 설명
-- 팀 멤버는 기본적으로 Privacy Mode 강제
+- 모델 제공자와 무보존(ZDR) 계약을 적용하되 예외를 확인한다.
+- BYOK는 해당 공급자의 데이터 정책이 적용된다. 별도 보존 모델은 기본 비활성화·관리자 승인이 필요할 수 있다.
+- 위험 분류기가 이용 정책 위반 가능성을 감지하면 조사 목적으로 보존될 수 있다. Privacy Mode를 무조건적인 무저장 보장으로 안내하지 않는다.
+
+[ZDR 예외(P32)](https://cursor.com/help/security-and-privacy/privacy), [데이터 사용 정책(P34, 2026-08-28 개정)](https://cursor.com/data-use)
 
 ### 계정 삭제
 
-Cursor 보안 문서는 사용자가 Settings dashboard에서 Advanced → Delete Account를 할 수 있으며, 계정과 관련된 모든 데이터, indexed codebases를 포함해 30일 내 완전 제거를 보장한다고 설명한다.
+현재 계정 삭제 도움말은 활성 구독이 있으면 먼저 취소하고, 대시보드의 Advanced Account Settings에서 Delete Account를 실행하도록 안내한다. 계정·관련 데이터는 30일 내 제거한다고 설명하지만, **PC의 로컬 프로젝트 파일과 작성한 코드는 삭제하지 않는다.** 팀 멤버 제거, 구독 취소, 계정 삭제, PC 초기화를 별도 조치로 승인·기록한다. [계정 삭제(P35)](https://cursor.com/help/account-and-billing/delete-account)
 
 ### 코드베이스 인덱싱
 
-Cursor는 코드베이스 인덱싱을 제공한다. 보안 문서에 따르면 인덱싱 관련 데이터는 임베딩과 난독화된 메타데이터 형태로 저장될 수 있다. 사용자는 codebase indexing을 비활성화할 수 있다.
+코드베이스 인덱싱 여부와 저장 범위를 확인한다. 임시 파일 캐시도 있으므로 Privacy Mode가 로컬 처리만 한다는 뜻은 아니다. BYOK 요청도 Cursor 백엔드를 거친다. 교육 종료 후 원격 데이터와 PC 잔여 파일을 각각 [[compliance/데이터_리텐션_삭제|리텐션·삭제 점검]]에 기록한다. [데이터 흐름(P34)](https://cursor.com/data-use)
 
 ## 교육 운영 권장 설정
 
@@ -192,13 +209,17 @@ Cursor Desktop 로그인 이력은 Windows 사용자 폴더의 `%LOCALAPPDATA%` 
 
 ### SSO가 꼭 필요한가?
 
-수강생이 개인 Gmail을 쓰는 단기 교육이라면 SSO(Single Sign-On)가 어려울 수 있다. 그러나 조직 계정으로 운영하는 장기 과정이라면 SSO(Single Sign-On)/SCIM(System for Cross-domain Identity Management)이 있는 Enterprise 쪽이 관리가 쉽다.
+SSO는 Teams에서도 제공하며 도메인 검증이 필요하다. 자동 프로비저닝인 SCIM과 같은 기능이 아니다. 개인 Gmail을 조직의 검증 도메인처럼 취급하지 말고, 조직 계정·초대 제한·Enterprise SCIM 필요성을 나누어 검토한다. [SSO 범위(P31)](https://cursor.com/docs/account/teams/members)
 
 ### Cursor는 공식 리셀러에서 살 수 있나?
 
 Cursor 가격 페이지는 구독이 cursor.com에서만 직접 판매되며, 리셀러나 제3자 판매를 승인하지 않는다고 안내한다. 구매 경로를 확인해야 한다.
 
 ## 출처
+
+- [[automation/강의장_계정_초기화|강의장 계정 초기화와 최종 앱 계정 확인]]
+- [[issues/AI_서비스_장애_초동대응|AI 서비스 장애 초동대응]]
+- [[templates/계정_운영_기록|설정·배정·회수 기록 양식]]
 
 - Cursor Security: https://cursor.com/security
 - Cursor Pricing: https://cursor.com/pricing

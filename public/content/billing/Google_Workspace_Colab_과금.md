@@ -1,6 +1,6 @@
 # Google Workspace·Colab 과금
 
-> 상위 문서: [[../Home|AI 계정 운영]]
+> 상위 문서: [[Home|AI 계정 운영]]
 > 분류: Google Workspace / Colab / 결제
 
 [목차]
@@ -31,7 +31,7 @@ Cloud Identity Free 라이선스는 무료 ID 라이선스로 남을 수 있다.
 
 ### 실제 부과 비용
 
-2026-04-25 기준 Google Workspace Business 플랜의 표준 USD 가격은 다음과 같이 안내된다.
+2026-09-07 재확인한 Google Workspace Business 표준 USD 가격은 다음과 같다. 기존 4월 기록과 같은 수치다. [결제 플랜(P27)](https://knowledge.workspace.google.com/admin/billing/compare-flexible-and-annual-fixed-term-payment-plans)
 
 | 플랜 | Flexible Plan | Annual/Fixed-Term Plan |
 |---|---:|---:|
@@ -103,7 +103,7 @@ Colab Pro 결제 초기에 2개만 구매 가능한 것처럼 보이는 상황�
 
 ### Colab 실제 부과 비용
 
-Google Workspace add-ons 문서 기준 Colab Pro/Pro+의 사용자당 월 비용은 다음과 같다.
+2026-09-07 재확인한 조직 Colab Pro/Pro+의 사용자당 월 비용과 정기 CU는 다음과 같다. PAYG 추가 구매의 유효기간과 혼동하지 않는다. [Add-ons(P28)](https://knowledge.workspace.google.com/admin/getting-started/editions/google-workspace-add-ons)
 
 | 서비스 | Annual/Fixed-Term Plan | Flexible Plan | compute units |
 |---|---:|---:|---:|
@@ -115,6 +115,8 @@ Google Workspace add-ons 문서 기준 Colab Pro/Pro+의 사용자당 월 비용
 Colab은 “서비스 ON”과 “유료 라이선스 할당”이 별개다. 비용은 유료 라이선스를 몇 명에게 할당했는지와 결제 플랜을 기준으로 본다.
 
 ## 인보이스와 회계 처리
+
+계정별 PAYG는 [[billing/Colab_PAYG_결제_프로필|Business 결제 프로필 절차]]에서 다룬다. 공유 프로필 초대·수락·구매·CU 반영·영수증 확보·권한 회수를 별도 상태로 기록한다. 지원 안내를 실제 49계정 성공으로 바꾸지 않는다(U10). 정기 부여·추가 구매·만료·사용·조정은 [[services/Colab_CU와_런타임_운영|CU 대장]]에서 구분한다.
 
 인보이스는 보통 Billing → Payment accounts 쪽에서 확인한다.
 

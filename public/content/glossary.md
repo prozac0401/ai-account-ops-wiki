@@ -168,3 +168,23 @@ Large Language Model. 대량의 텍스트를 학습해 문장을 이해하고 �
 ## 선결제
 
 앞으로 쓸 비용 일부를 미리 내는 것. Google Workspace에서는 신규 계정 제한을 풀기 위한 수동 결제와 연결될 수 있다.
+
+## CU(Compute Units)
+
+Colab 컴퓨팅 사용량 단위다. 부여·구매·만료·사용·조정과 수집 실패를 [[services/Colab_CU와_런타임_운영|CU 대장]]에서 구분한다.
+
+## PAYG(Pay As You Go)
+
+필요한 사용량을 구매하는 방식이다. Colab의 계정별 구매 권한은 [[billing/Colab_PAYG_결제_프로필|결제 프로필 절차]]로 확인한다.
+
+## Hard Auto
+
+Cursor의 Auto 사용 통제다. 특정 저가 모델 고정이나 비용 0의 뜻이 아니다. [[billing/Cursor_과금|Router·사용량 정책]]을 확인한다.
+
+## Spend Alert와 Hard Spend Limit
+
+사용량 알림과 요청 차단용 지출 한도다. [[services/OpenAI_API|API의 적용 범위·지연·오류 코드]]를 구분한다.
+
+## HOLD
+
+판독·승인·증거가 부족하여 진행·완료 판정을 보류한 상태다. 실패를 성공으로, 미확인 잔량을 0으로 바꾸지 않는다.

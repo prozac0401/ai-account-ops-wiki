@@ -15,13 +15,17 @@
 
 ## 문서 성격
 
-이 위키는 세 가지를 구분한다.
+계정·권한·좌석·회수·데이터 보존 정책은 2026-09-07 공식 웹사이트를 다시 확인했다. [[SOURCES|정책별 확인 범위]]와 [[operations/확인_대기_목록|남은 확인 질문]]을 함께 읽는다. 공식 정책 확인이 실제 계정 설정·현장 검수·과거 사건의 해결을 입증하지는 않는다.
+
+이 위키는 담당자 업무매뉴얼과 운영 백서다. 운영의 시작점은 Cursor이며 Workspace·Colab과 다른 AI 도구로 확대되었다. 신규 역할·주기·완료 기준은 조직이 채택할 제안이고, 승인되었다고 간주하지 않는다. 다음 다섯 상태를 구분한다.
 
 | 구분 | 뜻 | 예시 |
 |---|---|---|
-| 공식 기준 | 서비스 제공사가 문서로 밝힌 내용 | ChatGPT Business 최소 좌석, Cursor Privacy Mode, Colab 라이선스 할당 |
-| 현장 실제 사례 | 이번 운영에서 실제로 겪었거나 문의했던 내용 | Colab Pro를 처음에는 2개만 살 수 있었던 상황, 월 구독액 절반 선결제 요구 |
-| 운영 판단 | 공식 기준과 실제 사례를 섞어 만든 내부 운영 방식 | 교육 전 1명으로 테스트, 교육 종료 후 회수 로그 보관 |
+| 공식 확인 | 공식 문서의 확인일·적용 범위를 명시 | 2026-09-07 정책 재확인 |
+| 원본 자료 확인 | 원본 검토 기록의 범위를 명시 | F번호는 제공 묶음의 검토 결과이며 이번 원본 재검증 아님 |
+| 대화에서 회수 | 검색 요약·사용자 설명 | 대화 전문·최종 합의를 대신하지 않음 |
+| 설계·제안 | 조직이 채택·검증할 절차 | 역할·주기·확대 게이트 |
+| 확인 필요 | 원문·현장·계약 증거 없음 | U번호로 질문·담당·다음 조치 관리 |
 
 공식 기준은 가능한 한 출처를 붙였다. 현장 실제 사례는 “일반 규칙”으로 단정하지 않고, 별도 표시를 붙였다.
 
@@ -34,7 +38,7 @@
 | ChatGPT Business | 팀 워크스페이스, 좌석, 멤버 초대, 데이터 처리, 수강생 사용 |
 | OpenAI API Platform | 조직, API 작업 단위, API 키, 서비스 계정, 사용량 예산 |
 | Cursor | AI 코드 편집기, 팀 결제, Privacy Mode, 코드/프롬프트 취급 |
-| Claude Business / Team | 유사 LLM(Large Language Model) <sup class="wiki-footnote-ref"><a class="wiki-footnote-link" id="abbr-ref-2" href="#abbr-note-2">[2]</a></sup> 팀 서비스, 데이터 보존, 소유자 권한, 부록 성격 |
+| Claude Team / Enterprise | 유사 LLM(Large Language Model) <sup class="wiki-footnote-ref"><a class="wiki-footnote-link" id="abbr-ref-2" href="#abbr-note-2">[2]</a></sup> 팀 서비스, 데이터 보존, 소유자 권한, 부록 성격 |
 
 ## 빠른 이동
 
@@ -48,13 +52,18 @@
 
 ### 서비스별
 
+- [[services/Colab_CU와_런타임_운영|Colab CU 대장과 런타임 종료]]
+
 - [[services/Google_Workspace_및_Colab|Google Workspace 및 Colab]]
 - [[services/ChatGPT_Business|ChatGPT Business]]
 - [[services/OpenAI_API|OpenAI API Platform]]
 - [[services/Cursor|Cursor]]
-- [[services/Claude_Business|Claude Business]]
+- [[services/Claude_Business|Claude Team / Enterprise]]
 
 ### 과금
+
+- [[billing/Colab_PAYG_결제_프로필|Colab PAYG 결제 프로필]]
+- [[billing/Claude_과금|Claude 좌석 감소와 API 결제]]
 
 - [[billing/과금_전체_지도|과금 운영 개요]]
 - [[billing/Google_Workspace_Colab_과금|Google Workspace·Colab 과금]]
@@ -62,6 +71,25 @@
 - [[billing/Cursor_과금|Cursor 과금]]
 - [[billing/해외_결제_차단_대응|해외 결제 차단 대응]]
 - [[billing/실제_비용과_True_up|실제 비용과 True-up]]
+
+### 이슈 대응
+
+- [[issues/Cursor_Unpaid_Admin_표시_오류_대응|Cursor 4월 표시 오류: 해결 확인]]
+- [[issues/Cursor_청구_크레딧_분쟁|Cursor 6–7월 청구·접근 분쟁: 미확인 항목 유지]]
+- [[issues/AI_서비스_장애_초동대응|AI 서비스 장애 초동대응]]
+
+### 운영 도구
+
+- [[automation/Colab_Manager_운영|Colab Manager 버전별 현장 검증]]
+- [[automation/강의장_계정_초기화|강의장 계정 초기화]]
+- [[automation/비밀번호_교체|비밀번호 교체와 비밀 로그]]
+- [[automation/도구_배포와_검증|도구 배포와 검증]]
+
+### 유지보수와 백서
+
+- [[operations/위키_유지보수|위키 유지보수·공개 범위]]
+- [[operations/확인_대기_목록|미확인 사항과 원문 요청]]
+- [[whitepaper/운영_연혁과_개선|운영 연혁과 개선]]
 
 ### 컴플라이언스
 
@@ -76,6 +104,8 @@
 - [[education/수강생_주의사항|수강생 주의사항]]
 
 ### 양식과 Q&A
+
+- [[templates/계정_운영_기록|계정 배정·구매·CU·회수·인수인계 양식]]
 
 - [[templates/수강생_안내문|수강생 안내문]]
 - [[templates/개인정보_고지서_동의서|개인정보 고지서·동의서]]

@@ -114,6 +114,13 @@ const docs = [
     summary: "조직 계정, Cloud Identity, Business Starter, Colab 라이선스 할당을 다룹니다.",
   },
   {
+    id: "services/Colab_CU와_런타임_운영",
+    title: "Colab CU와 런타임 운영",
+    file: "services/Colab_CU와_런타임_운영.md",
+    group: "서비스별",
+    summary: "CU 부여·구매·만료·사용·조정, 수집 실패와 0, 런타임 종료를 구분합니다.",
+  },
+  {
     id: "services/ChatGPT_Business",
     title: "ChatGPT Business",
     file: "services/ChatGPT_Business.md",
@@ -136,7 +143,7 @@ const docs = [
   },
   {
     id: "services/Claude_Business",
-    title: "Claude Business",
+    title: "Claude Team / Enterprise",
     file: "services/Claude_Business.md",
     group: "서비스별",
     summary: "Claude 팀 서비스의 데이터 보존, 소유자 권한, 운영상 유의점을 모읍니다.",
@@ -156,6 +163,13 @@ const docs = [
     summary: "Workspace와 Colab 라이선스 구매, 할당, 결제 이슈를 정리합니다.",
   },
   {
+    id: "billing/Colab_PAYG_결제_프로필",
+    title: "Colab PAYG 결제 프로필",
+    file: "billing/Colab_PAYG_결제_프로필.md",
+    group: "과금",
+    summary: "Google 결제 프로필의 임시 구매 권한, 초대·수락·구매·증빙·회수를 구분합니다.",
+  },
+  {
     id: "billing/ChatGPT_OpenAI_API_과금",
     title: "ChatGPT·OpenAI API 과금",
     file: "billing/ChatGPT_OpenAI_API_과금.md",
@@ -168,6 +182,13 @@ const docs = [
     file: "billing/Cursor_과금.md",
     group: "과금",
     summary: "Cursor 팀 플랜의 결제, 좌석, 비용 회수 관점을 다룹니다.",
+  },
+  {
+    id: "billing/Claude_과금",
+    title: "Claude 과금",
+    file: "billing/Claude_과금.md",
+    group: "과금",
+    summary: "멤버 제거와 총 좌석 감소, 갱신 반영, API 별도 결제를 확인합니다.",
   },
   {
     id: "billing/해외_결제_차단_대응",
@@ -189,6 +210,69 @@ const docs = [
     file: "issues/Cursor_Unpaid_Admin_표시_오류_대응.md",
     group: "이슈 대응",
     summary: "Cursor 대시보드에서 Unpaid Admin이 Admin으로 보일 때 과금 여부와 복구 확인 절차를 정리합니다.",
+  },
+  {
+    id: "issues/Cursor_청구_크레딧_분쟁",
+    title: "Cursor 청구·크레딧 분쟁",
+    file: "issues/Cursor_청구_크레딧_분쟁.md",
+    group: "이슈 대응",
+    summary: "6–7월 정산과 팀 접근 사례를 4월 표시 오류와 분리하고 최종 미확인 상태를 유지합니다.",
+  },
+  {
+    id: "issues/AI_서비스_장애_초동대응",
+    title: "AI 서비스 장애 초동대응",
+    file: "issues/AI_서비스_장애_초동대응.md",
+    group: "이슈 대응",
+    summary: "Provider error, High load, 계정 불일치, 사용 한도를 분류하고 재시도·수업 복구를 기록합니다.",
+  },
+  {
+    id: "automation/Colab_Manager_운영",
+    title: "Colab Manager 운영",
+    file: "automation/Colab_Manager_운영.md",
+    group: "운영 도구",
+    summary: "V2·V3별 N≥2에서 0까지의 현장 시험과 자동 시험 보고의 차이를 확인합니다.",
+  },
+  {
+    id: "automation/강의장_계정_초기화",
+    title: "강의장 계정 초기화",
+    file: "automation/강의장_계정_초기화.md",
+    group: "운영 도구",
+    summary: "Cursor V3와 Reset 00–48의 권한·삭제 범위를 분리하고 실제 앱 계정을 확인합니다.",
+  },
+  {
+    id: "automation/비밀번호_교체",
+    title: "비밀번호 교체",
+    file: "automation/비밀번호_교체.md",
+    group: "운영 도구",
+    summary: "교체 v0.3의 재로그인 검수와 with-secrets 로그의 제한 보관·삭제 기준입니다.",
+  },
+  {
+    id: "automation/도구_배포와_검증",
+    title: "도구 배포와 검증",
+    file: "automation/도구_배포와_검증.md",
+    group: "운영 도구",
+    summary: "ZIP·EXE 다운로드, 해시·서명·보안 경고, 버전별 현장 검수와 배포 증거를 구분합니다.",
+  },
+  {
+    id: "operations/위키_유지보수",
+    title: "위키 유지보수",
+    file: "operations/위키_유지보수.md",
+    group: "유지보수와 백서",
+    summary: "문서 책임·정책 갱신, 공개 자료·내부 원본, 실제 배포와 접근 제한의 확인 범위입니다.",
+  },
+  {
+    id: "operations/확인_대기_목록",
+    title: "확인 대기 목록",
+    file: "operations/확인_대기_목록.md",
+    group: "유지보수와 백서",
+    summary: "U01–U18의 미확인 질문, 필요한 계약·원문·현장 증거와 담당 역할 제안입니다.",
+  },
+  {
+    id: "whitepaper/운영_연혁과_개선",
+    title: "운영 연혁과 개선",
+    file: "whitepaper/운영_연혁과_개선.md",
+    group: "유지보수와 백서",
+    summary: "Cursor로 시작한 운영의 확대, 실제 선택·사건·결과와 도입 후보를 구분합니다.",
   },
   {
     id: "compliance/개인정보_고지_동의",
@@ -231,6 +315,13 @@ const docs = [
     file: "education/수강생_주의사항.md",
     group: "교육 운영",
     summary: "수강생에게 반드시 고지해야 할 사용 주의사항입니다.",
+  },
+  {
+    id: "templates/계정_운영_기록",
+    title: "계정 운영 기록 양식",
+    file: "templates/계정_운영_기록.md",
+    group: "양식과 Q&A",
+    summary: "배정·수업·구매·CU·초기화·배포·장애·회수·인수인계의 빈 기록 양식입니다.",
   },
   {
     id: "templates/수강생_안내문",
@@ -280,6 +371,7 @@ const sections = [
     icon: "layout-grid",
     docIds: [
       "services/Google_Workspace_및_Colab",
+      "services/Colab_CU와_런타임_운영",
       "services/ChatGPT_Business",
       "services/OpenAI_API",
       "services/Cursor",
@@ -292,8 +384,10 @@ const sections = [
     docIds: [
       "billing/과금_전체_지도",
       "billing/Google_Workspace_Colab_과금",
+      "billing/Colab_PAYG_결제_프로필",
       "billing/ChatGPT_OpenAI_API_과금",
       "billing/Cursor_과금",
+      "billing/Claude_과금",
       "billing/해외_결제_차단_대응",
       "billing/실제_비용과_True_up",
     ],
@@ -301,7 +395,17 @@ const sections = [
   {
     label: "이슈 대응",
     icon: "triangle-alert",
-    docIds: ["issues/Cursor_Unpaid_Admin_표시_오류_대응"],
+    docIds: ["issues/Cursor_Unpaid_Admin_표시_오류_대응", "issues/Cursor_청구_크레딧_분쟁", "issues/AI_서비스_장애_초동대응"],
+  },
+  {
+    label: "운영 도구",
+    icon: "list-checks",
+    docIds: ["automation/Colab_Manager_운영", "automation/강의장_계정_초기화", "automation/비밀번호_교체", "automation/도구_배포와_검증"],
+  },
+  {
+    label: "유지보수와 백서",
+    icon: "book-open",
+    docIds: ["operations/위키_유지보수", "operations/확인_대기_목록", "whitepaper/운영_연혁과_개선"],
   },
   {
     label: "컴플라이언스",
@@ -321,11 +425,25 @@ const sections = [
   {
     label: "양식과 Q&A",
     icon: "messages-square",
-    docIds: ["templates/수강생_안내문", "templates/개인정보_고지서_동의서", "qna/현장_실제_QA", "glossary", "SOURCES"],
+    docIds: ["templates/계정_운영_기록", "templates/수강생_안내문", "templates/개인정보_고지서_동의서", "qna/현장_실제_QA", "glossary", "SOURCES"],
   },
 ];
 
 const quickTiles = [
+  {
+    label: "이슈 대응",
+    description: "Cursor 사건 기록과 AI 서비스 장애·사용 한도 초동대응",
+    icon: "triangle-alert",
+    target: "issues/AI_서비스_장애_초동대응",
+    tone: "amber",
+  },
+  {
+    label: "운영 기록 양식",
+    description: "배정·구매·회수·현장 검수·인수인계 대장",
+    icon: "list-checks",
+    target: "templates/계정_운영_기록",
+    tone: "teal",
+  },
   {
     label: "서비스별",
     description: "주요 AI·업무 서비스의 계정 생성부터 설정, 보안, 운영 가이드",

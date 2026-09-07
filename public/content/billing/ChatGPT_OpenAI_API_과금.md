@@ -1,6 +1,6 @@
 # ChatGPT·OpenAI API 과금
 
-> 상위 문서: [[../Home|AI 계정 운영]]
+> 상위 문서: [[Home|AI 계정 운영]]
 > 분류: OpenAI / 과금 / 좌석 / API 사용량
 
 [목차]
@@ -13,16 +13,18 @@ ChatGPT Business는 좌석 중심이다. OpenAI API는 사용량 중심이다. �
 
 ## ChatGPT Business 좌석 과금
 
-OpenAI 도움말 기준으로 ChatGPT Business의 표준 ChatGPT 좌석은 최소 2석이 필요하다. 대부분 국가 기준 가격은 월간 결제와 연간 결제 단가가 다르게 안내된다.
+2026-09-07 공식 재확인 기준 현재 ChatGPT Business는 Standard·Premium 합계 최소 2석이다. 기존 계약과 legacy Codex 좌석은 따로 확인한다(U09). [좌석·청구(P26)](https://help.openai.com/en/articles/8792536-managing-billing-and-seats-in-chatgpt-business)
 
 ### 실제 부과 비용
 
-2026-04-25 기준 OpenAI 도움말은 ChatGPT Business standard seat 가격을 다음과 같이 안내한다.
+현재 도움말의 USD 단가는 다음과 같다. 연 결제의 월 환산액과 실제 연간 청구액을 구분하고 세금·지역·계약 조건을 구매 화면에서 확인한다.
 
 | 결제 방식 | 단가 | 비고 |
 |---|---:|---|
-| Monthly plan | $25/user/month | 최소 2 standard seats |
-| Annual plan | $20/user/month | 연간 청구 |
+| Standard 월간 | $25/user/month | 현재 일반 좌석 |
+| Standard 연간 | $20/user/month | 연간 청구 |
+| Premium 월간 | $125/user/month | 현재 일반 좌석 |
+| Premium 연간 | $100/user/month | 연간 청구 |
 
 예를 들어 52석을 월간 플랜으로 운영하면 `52 x $25 = $1,300/month` 수준이다. 연간 플랜으로 잡으면 `52 x $20 x 12 = $12,480/year` 수준이다.
 
@@ -38,24 +40,27 @@ Self-serve ChatGPT Business는 신용카드와 체크카드 결제를 지원한�
 ### 운영상 의미
 
 - 소규모 교육은 카드로 빠르게 시작할 수 있다.
-- 공공기관/대기업처럼 인보이스가 필수인 곳은 Business self-serve가 맞지 않을 수 있다.
+- 청구서 PDF 증빙과 invoice/PO 후불 결제 계약은 다르다. 결제 방식이 맞는지 따로 확인한다.
 - 월간 플랜은 좌석 추가분을 일할 계산하고, 좌석 감소는 다음 월 과금 주기에 반영한다.
-- 연간계약은 중간 좌석 증가 시 월별 true-up 정산 주기가 적용될 수 있다.
+- 현재 추가 좌석 구매는 즉시 일할 청구되며 연간 좌석 약정은 현재 계약 기간에 유지된다. 과거 월별 true-up 사례와 구분한다.
 - 좌석을 줄였다고 이미 결제된 연간 비용이 바로 줄어든다고 보면 안 된다.
 
 ### 사용자 추가·제거 과금
 
-월간 플랜에서는 월 과금 주기 시작 시 baseline standard seats를 먼저 청구한다. 월 중 baseline보다 좌석이 늘면 늘어난 좌석은 일할 계산된다. 반대로 좌석 수를 줄여 baseline보다 낮아져도 현재 월의 baseline 비용은 유지되고, 다음 월 청구일부터 반영된다. 즉 월간 플랜은 비용 조정이 있지만, 연간 플랜의 월별 true-up 정산 주기와는 구분한다.
+현재는 Owner의 **구매 좌석 수**와 멤버 배정을 구분한다. 이미 산 빈 좌석 배정에는 추가 구매비가 없고, 새 좌석 구매는 남은 기간을 즉시 일할 청구한다. 감소는 월간이면 다음 월 갱신, 연간이면 다음 연간 갱신에 적용한다. [구매·감소(P26)](https://help.openai.com/en/articles/8792536-managing-billing-and-seats-in-chatgpt-business)
 
 ```text
 월간 플랜 예시
 1일차: 10 seats x $25 = $250
 10일차: 3 seats 추가
 추가분: 3 seats x $25 x 20/30 = $50
-다음 invoice 총액 = $375
+사용월 귀속 비용: $250 + $50 = $300
+다음 주기 기본료: 13 x $25 = $325
+조건부 합산 청구: 미청구 조정 $50 + 다음 기본료 $325 = $375
+현재 즉시 청구로 $50을 이미 냈다면 다음 기본료는 $325이며 재합산하지 않는다.
 ```
 
-연간 플랜에서는 월별 true-up 정산 주기가 중요하다. 연중 좌석을 추가하면 초과 좌석은 남은 기간 기준으로 일할 정산되고, true-up 후 새 좌석 수가 남은 연도 baseline이 된다. 한 달 안에 현재 baseline의 1배 또는 20석 이상을 추가하면 즉시 true-up invoice가 나올 수 있다.
+아래는 **2026-04-25 문서에 남은 과거 연간 true-up 계산 사례**다. 당시 설명의 월별 정산·추가량 트리거를 현행 신규 플랜 규칙으로 쓰지 않는다. 현재는 추가 좌석 즉시 청구를 확인하고, 실제 legacy 적용은 계약 원문이 필요하다(U09).
 
 ```text
 연간 플랜 예시
@@ -69,15 +74,19 @@ Self-serve ChatGPT Business는 신용카드와 체크카드 결제를 지원한�
 
 ## Codex 좌석과 크레딧
 
-ChatGPT Business에는 표준 ChatGPT 좌석과 Codex 좌석이 구분된다.
+| 비용 경로 | 확인할 것 |
+|---|---|
+| ChatGPT 구독 좌석 | Standard·Premium 또는 실제 legacy 계약, 구매·배정 수 |
+| 워크스페이스 크레딧 | 해당 플랜에서 허용하는 ChatGPT·Codex 등의 추가 사용, 잔량·사용 통제 |
+| API 키 사용 | API 조직·프로젝트에 별도 청구, 앱 로그인 구독으로 대체되지 않음 |
 
-표준 좌석은 고정 좌석 과금이고, Codex 좌석은 사용량 기반 요소가 있다. 교육에서 Codex 실습을 넣을 경우, 단순히 ChatGPT 좌석 수만 보는 것이 아니라 크레딧과 사용량 제한도 확인해야 한다.
+같은 Codex 화면이라도 인증·결제 경로를 확인한다. 크레딧은 적용 가능한 워크스페이스 기능 범위에서 쓰며 API 키 호출을 구독에 포함된 사용량으로 처리하지 않는다. [크레딧·결제 경로(P14)](https://learn.chatgpt.com/docs/pricing)
 
 ## OpenAI API 사용량 과금
 
 API는 API 작업 단위별 사용량, 예산, rate limit 관리가 핵심이다.
 
-OpenAI API는 좌석 과금이 아니라 모델별 사용량 과금이다. 예를 들어 GPT-5.2는 공식 pricing 문서 기준 input $1.75/1M tokens, cached input $0.175/1M tokens, output $14/1M tokens로 안내된다.
+OpenAI API는 좌석이 아니라 모델별 사용량 과금이다. 아래 GPT-5.2 단가는 2026-04-25 기록의 **산식 예시**이며 현행 견적이 아니다. 2026-09-07 재조회한 가격표 본문에서는 해당 모델 행을 확인하지 못했으므로 최신 단가로 다시 인증하지 않는다. 모델·처리 유형·컨텍스트 조건을 실습 직전 대조한다. [API 가격(P30)](https://developers.openai.com/api/docs/pricing)
 
 ```text
 GPT-5.2 단순 예시
@@ -113,6 +122,8 @@ OpenAI
 ```
 
 ## 비용 폭주를 막는 방법
+
+알림과 강제 차단은 다르다. 2026-09-07 공식 문서는 조직·프로젝트의 spend alert는 알림만 보내고, 별도로 활성화한 hard spend limit는 한도 도달 시 해당 API 요청을 429로 차단한다고 설명한다. 추적 지연으로 초과가 발생할 수 있다. 설정 절차와 오류 구분은 [[services/OpenAI_API|API 예산과 사용량 제한]]에서 확인한다. [Spend limits(P17)](https://developers.openai.com/api/docs/guides/spend-limits)
 
 - 교육용 API 작업 단위를 별도로 만든다.
 - 예산을 낮게 잡고 알림을 켠다.

@@ -1,7 +1,8 @@
 # Google Workspace 및 Colab
 
-> 상위 문서: [[../Home|AI 계정 운영]]
+> 상위 문서: [[Home|AI 계정 운영]]
 > 분류: Google Workspace / Colab / 라이선스 운영
+> 라이선스·계정 정책 공식 재확인: 2026-09-07 / 구매 채널·계약·기존 CU는 별도 확인
 
 [목차]
 
@@ -18,6 +19,8 @@ Google Workspace는 조직 계정과 결제의 바닥이다. Colab Pro와 Pro+�
 Cloud Identity Free와 Google Workspace는 한 조직에서 함께 쓸 수 있다. Google 문서에 따르면 Cloud Identity와 Google Workspace를 함께 가지고 있으면 모든 사용자는 무료 Cloud Identity 라이선스를 자동으로 가지며, 필요한 사용자에게만 유료 Google Workspace 라이선스를 추가로 줄 수 있다.
 
 즉, 모든 사용자에게 Business Starter가 필요한 것은 아니다.
+
+Workspace 유료 라이선스를 제거해도 무료 Cloud Identity 라이선스는 유지된다. 다만 이것이 Workspace 데이터의 영구 보관이나 무료 유료앱 사용을 보장하지는 않는다. 기존 데이터·용량·필요 서비스를 확인한 뒤 회수한다. [Cloud Identity 라이선스(P41)](https://docs.cloud.google.com/identity/docs/how-to/how-licensing-works-for-cloud-identity)
 
 ### 운영 해석
 
@@ -52,7 +55,7 @@ Colab은 세 층으로 보면 이해하기 쉽다.
 
 ## Colab Pro/Pro+ 설정 순서
 
-### 1단계: 구독 추가
+### 구독 추가
 
 Google Admin console에서 Colab Pro 또는 Pro+ 구독을 추가한다.
 
@@ -67,15 +70,25 @@ Admin console
 → Get Started
 ```
 
-### 2단계: Colab 서비스 켜기
+### Colab 서비스 켜기
 
 무료 Colab 서비스가 꺼져 있으면 Pro 라이선스를 줘도 사용자가 기능을 못 쓸 수 있다.
 
 공식 문서도 Colab 서비스를 사용자에게 켜는 단계를 별도로 안내한다.
 
-### 3단계: 라이선스 할당
+### 라이선스 할당
 
 사용자가 Colab Pro/Pro+를 쓰려면 해당 서비스 라이선스가 필요하다. 라이선스는 개별 사용자, CSV(Comma-Separated Values) <sup class="wiki-footnote-ref"><a class="wiki-footnote-link" id="abbr-ref-1" href="#abbr-note-1">[1]</a></sup>, OU(Organizational Unit) <sup class="wiki-footnote-ref"><a class="wiki-footnote-link" id="abbr-ref-2" href="#abbr-note-2">[2]</a></sup> 또는 액세스 그룹 기준으로 할당할 수 있다.
+
+현재 공식 절차는 User management 권한으로 Directory → Users에서 대상을 선택해 Colab 라이선스를 할당한다. OU 일괄 할당은 하위 OU 사용자까지 포함하지 않는다. 활성화에는 최대 24시간이 걸릴 수 있으므로 서비스 ON·할당 결과·실제 로그인 계정을 각각 확인한다. 제거도 해당 라이선스의 Remove Licenses에서 처리하고 결과를 재조회한다. [할당·회수(P10)](https://knowledge.workspace.google.com/admin/colab/assign-colab-licenses-to-users)
+
+## 계정 정지와 비용 회수
+
+계정 정지는 로그인·서비스 접근 제한이며 데이터 삭제가 아니다. 공유 문서의 기존 공동작업자는 계속 접근할 수 있다. 정지 계정은 Annual과 Flexible 모두 활성 계정과 같은 요율로 과금되므로, 정지만으로 절감 완료라고 기록하지 않는다. [정지 영향(P42)](https://knowledge.workspace.google.com/admin/users/suspend-a-user-temporarily)
+
+운영 제안으로 접근 차단, 유료 라이선스 제거, 구독의 청구 좌석 감소 시점, Drive 공유·자료 인계를 별도 확인한다. 연간 약정은 라이선스를 회수해도 약정 금액이 바로 줄지 않을 수 있다. 계정 삭제를 비용 절감의 기본 절차로 삼지 않는다. [[billing/Google_Workspace_Colab_과금|계약별 과금]], [[compliance/데이터_리텐션_삭제|잔여 데이터]], [[billing/Colab_PAYG_결제_프로필|결제 프로필 권한]]을 함께 점검한다. 라이선스·프로필 회수 후 기존 CU의 효과는 U04·U05로 유지한다.
+
+세션 회수에는 사용자 Security의 로그인 쿠키 재설정을 사용한다. 외부 IdP SSO 세션이 살아 있으면 다시 접근할 수 있으므로 IdP 세션을 먼저 종료한다. Gmail 로그아웃은 최대 1시간, 다른 앱은 별도 지연이 있을 수 있다. 앱 비밀번호·외부 앱 권한도 따로 확인한다. 단순 외부 앱 권한 제거는 재로그인을 영구 차단하지 않는다. [세션·연결 앱(P48)](https://knowledge.workspace.google.com/admin/security/manage-a-users-security-settings?hl=en)
 
 ## 현장 실제 사례
 
@@ -87,7 +100,7 @@ Colab Pro 결제 초기에 2개만 구매 가능한 것처럼 보이는 상황�
 
 ### 온라인 직접 구매 시 연간계약만 가능했던 점
 
-Google의 Colab 설정 문서는 온라인으로 직접 구매할 경우 Annual/Fixed-Term Plan을 선택해야 한다고 안내한다. Flexible Plan이 필요하면 Google 영업 담당자 또는 Google Cloud 파트너에게 문의하는 흐름으로 보는 편이 안전하다.
+2026-09-07에도 공식 Colab 설정 문서는 온라인 직접 구매에 Annual/Fixed-Term Plan을 안내한다. Flexible Plan은 Google 영업·파트너 경로이며 Workspace 가입과 같은 구매 채널을 사용한다. 조직 라이선스 구매에는 도메인 검증과 Billing management 권한을 확인한다. 개인 PAYG 구매 절차와 혼동하지 않는다. [조직 Colab 설정(P47)](https://knowledge.workspace.google.com/admin/colab/set-up-colab-pro)
 
 ### 월 구독액 절반 선결제 요구
 
@@ -127,7 +140,7 @@ Google 관리 콘솔
 → 복구 정보
 ```
 
-Google 문서는 승인되지 않은 시도가 의심되면 **본인 확인 요청**을 표시할 수 있고, 이때 복구 전화번호 또는 복구 이메일 주소로 전송되는 인증 코드를 입력해야 할 수 있다고 설명한다. 또한 복구 전화번호는 사용자마다 고유해야 하며, 여러 사용자가 같은 복구 전화번호를 쓰면 보안상 자동 차단될 수 있다고 안내한다.
+Google 문서는 승인되지 않은 시도가 의심되면 **본인 확인 요청**을 표시할 수 있고, 이때 복구 전화번호 또는 조직 외부 복구 이메일 주소의 인증 코드가 필요할 수 있다고 설명한다. 복구 전화번호는 사용자마다 고유해야 하며 여러 사용자가 공유하면 보안상 차단될 수 있다. 기존의 1인 1계정·3개 관찰값은 공식 처리 한도가 아니다. [복구 정보(P48)](https://knowledge.workspace.google.com/admin/security/manage-a-users-security-settings?hl=en)
 
 ### 최초 로그인 전 준비
 
@@ -181,6 +194,8 @@ Workspace 계정을 여러 강의장에서 순차적으로 사용해야 하면 �
 관리자가 일시적으로 문제를 풀어야 하는 경우, Google Workspace 문서에는 승인된 사용자가 본인 확인을 할 수 없을 때 사용자 단위로 **10분 동안 본인 확인 요청 또는 본인 확인 질문을 사용 중지**할 수 있다고 안내된다. 다만 이는 보안을 약화시키는 예외 조치이므로 최고 관리자 승인, 대상 계정, 시작 시각, 종료 시각, 사유를 기록하고 반복 사용하지 않는다.
 
 ## 운영 체크리스트
+
+2026-09-07 추가한 [[billing/Colab_PAYG_결제_프로필|PAYG 구매 권한 초대·수락·회수]]는 기존 Cloud Identity·라이선스 절차와 별개다. [[services/Colab_CU와_런타임_운영|CU 대장·런타임 종료]]와 [[automation/Colab_Manager_운영|Colab Manager 현장 검증]]까지 연결한다. 라이선스 회수 후 CU 소멸을 단정하지 않으며 U04·U05의 전후 확인을 남긴다.
 
 ### 구독 전
 
